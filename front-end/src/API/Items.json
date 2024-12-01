@@ -1,10 +1,34 @@
 {
   "BESTIIEMS": [
     {
-      "name": "Tomatoes",
-      "image": "../../images/items/Tomatoes.webp",
-      "rate": 3.29,
-      "unit": "kg",
+      "name": "Sprite(250ml)",
+      "image": "../../images/items/sprite.jpg",
+      "rate": 5.99,
+      "unit": "bottle",
+      "avaiable": true,
+      "bestitems": false
+    },
+    {
+      "name": "Red Blue",
+      "image": "../../images/items/red blue.jpg",
+      "rate": 5.99,
+      "unit": "bottle",
+      "avaiable": true,
+      "bestitems": false
+    },
+    {
+      "name": "Frooti",
+      "image": "../../images/items/frooti.jpg",
+      "rate": 5.99,
+      "unit": "bottle",
+      "avaiable": true,
+      "bestitems": false
+    },
+    {
+      "name": "Red Lays",
+      "image": "../../images/items/red lays.jpg",
+      "rate": 5.99,
+      "unit": "pkt",
       "avaiable": true,
       "bestitems": false
     },
@@ -18,14 +42,21 @@
       "bestitems": false
     },
     {
-      "name": "Baking Powder",
-      "image": "../../images/items/Baking Powder.webp",
-      "rate": 1.29,
+      "name": "Coke(250ml)",
+      "image": "../../images/items/coke.jpg",
+      "rate": 5.99,
+      "unit": "bottle",
+      "avaiable": true,
+      "bestitems": false
+    },
+    {
+      "name": "Gyan Flour(5kg)",
+      "image": "../../images/items/gyan flour 5kg.jpg",
+      "rate": 1.99,
       "unit": "pkt",
       "avaiable": true,
       "bestitems": false
     },
-
     {
       "name": "Cumin Seeds(unpack)",
       "image": "../../images/items/Cumin Seeds.webp",
@@ -36,20 +67,36 @@
     },
 
     {
-      "name": "Honey",
-      "image": "../../images/items/Honey.webp",
-      "rate": 4.99,
-      "unit": "bottle",
+      "name": "Common Salt",
+      "image": "../../images/items/common salt.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
       "avaiable": true,
       "bestitems": false
     },
     {
-      "name": "Sesame Oil",
-      "image": "../../images/items/Sesame Oil.webp",
-      "rate": 5.99,
-      "unit": "bottle",
+      "name": "Corn",
+      "image": "../../images/items/corn.jpg",
+      "rate": 2.29,
+      "unit": "kg",
       "avaiable": true,
       "bestitems": false
+    },
+    {
+      "name": "Bhatmas",
+      "image": "../../images/items/bhatmas.webp",
+      "rate": 2.49,
+      "unit": "kg",
+      "avaiable": true,
+      "bestitems": false
+    },
+    {
+      "name": "Potato",
+      "image": "../../images/items/potato.webp",
+      "rate": 1.29,
+      "unit": "kg",
+      "avaiable": true,
+      "bestitems": true
     }
   ],
   "ALL": {
