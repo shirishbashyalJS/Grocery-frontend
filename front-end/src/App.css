@@ -1,0 +1,360 @@
+/***** header *****/
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9000;
+  box-shadow: 0rem 1rem 1rem orange;
+}
+/* @media screen and (min-width: 992px) {
+  .navbar {
+    padding: 0;
+  }
+  .navbar .navbar-nav .nav-link {
+    padding: 1em 0;
+  }
+  .navbar .navbar-nav .nav-item {
+    margin: 0 1em;
+  }
+} */
+
+.navbar .navbar-nav .nav-item {
+  position: relative;
+}
+.navbar .navbar-nav .nav-item::after {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  content: "";
+  background-color: black;
+  width: 0%;
+  height: 1px;
+  transition: all 0.5s;
+}
+.navbar .navbar-nav .nav-item:hover::after {
+  width: 100%;
+}
+
+.search-form {
+  flex: 1;
+  justify-content: center;
+}
+.navbar-brand-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-title {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+.input-search {
+  width: 70%;
+  font-size: 1.5rem;
+}
+.nav-link {
+  font-size: 1.7rem;
+}
+
+.cart-logo {
+  font-size: 3rem;
+}
+
+.cart-logo-nav {
+  position: relative;
+}
+
+.card-length-div {
+  position: absolute;
+  border-radius: 7.5px;
+  left: 40%;
+  background-color: white;
+  height: 15px;
+  width: 15px;
+  z-index: -10;
+  top: -3px;
+}
+.card-temp-div {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.cart-length {
+  font-size: 13px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  color: orange;
+}
+
+@media only screen and (max-width: 991px) {
+  .card-length-div {
+    left: 10px;
+  }
+}
+
+/* home */
+.home {
+  margin-top: 7rem;
+}
+
+/* carousel item */
+
+.carousel-entire-body {
+  position: relative;
+  height: 300px;
+}
+.gradient-carousel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: black;
+  width: 100%;
+  opacity: 0.8;
+}
+.carousel-img {
+  height: 300px;
+}
+
+.carousel-content {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  color: white;
+  letter-spacing: 7px;
+  cursor: pointer;
+  font-size: 3rem;
+  font-weight: 500;
+  transition: color 0.15s, letter-spacing 0.15s, text-shadow 0.15s,
+    transform 0.5s;
+}
+@media only screen and (max-width: 500px) {
+  .carousel-content {
+    font-size: 2rem;
+  }
+}
+.carousel-content:hover {
+  color: white;
+  letter-spacing: 10px;
+  transform: scale(1.1);
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+}
+
+/* Items */
+.items {
+  height: max-content;
+  width: 100%;
+}
+
+.items .card {
+  padding: 0;
+  scale: 0.5;
+  opacity: 0;
+  animation: fade linear forwards;
+  animation-timeline: view();
+  animation-range: entry;
+}
+@keyframes fade {
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+#bestitems {
+  width: 100%;
+  height: 10rem;
+}
+.items-title {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 500;
+  text-shadow: 1px -1px 1px black;
+}
+.best-card-text {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  /* text-decoration: none; */
+}
+.bestitems-link {
+  text-decoration: none;
+  color: black;
+}
+.bestitems-link {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-title .best-items-card {
+  cursor: pointer;
+}
+
+.label-btn {
+  margin: 5px;
+}
+@media only screen and (max-width: 570px) {
+  .btn-group {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-row-gap: 1rem;
+  }
+  .radio-input {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .label-btn {
+    margin: 0;
+  }
+}
+.all-items {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8rem;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container .card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  padding: 15px;
+  width: 250px;
+  height: max-content;
+  position: relative;
+  text-align: center;
+}
+
+.card-container .card-image {
+  position: relative;
+}
+
+.card-container .card-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card-container .favorite-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: gray;
+}
+
+.card-container .card-name {
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+.card-container .card-rate {
+  font-size: 1.2em;
+}
+.card-container .card-rating {
+  margin: 5px 0;
+  font-size: 1.2em;
+}
+.card-container .NavLink {
+  width: 100%;
+}
+.card-container .explore-button {
+  background-color: transparent;
+  color: black;
+  border: none;
+  font-size: 1.2em;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid black;
+  transition: all 0.15s;
+  width: 100%;
+}
+
+.card-container .explore-button:hover {
+  background-color: black;
+  color: white;
+}
+
+.product-container {
+  height: max-content;
+  margin-top: 10rem;
+}
+.product-image {
+  max-height: 200px;
+}
+.product-container .card-container .card {
+  width: 50%;
+  row-gap: 0.8rem;
+}
+@media only screen and (max-width: 770px) {
+  .product-container .card-container .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .product-container .card-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .product-container .product-image {
+    max-width: 350px;
+  }
+  .product-container .card .card-name-container {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.login {
+  margin-top: 10rem;
+}
+
+/* cartPage */
+
+.cartPage {
+  margin-top: 10rem;
+}
+/* modal */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5000;
+}
+.modal-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+}
+.modal-container h3 {
+  margin-bottom: 15px;
+}
+.modal-container p {
+  margin-bottom: 20px;
+}
