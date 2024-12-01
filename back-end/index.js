@@ -4,39 +4,42 @@ const server = express()
 const mongoose = require("mongoose")
 const orderDetail = require("./Modal/orderModel");
 const port = 2081;
+const products = require("./Modal/itemModel");
 
 server.use(cors());
 server.use(express.json()) 
 
 mongoose.connect('mongodb://localhost:27017/Grocery').then((e) =>
-  console.log('db connect')
+  console.log('db connect') 
 ).catch((err) =>
   console.log(err)
 );
 
 
+
 server.post("/newbashyalgeneralstore/orderedItems",async (req,res)=> {
   try{
-  let userOrder = new orderDetail({
-    items: req.body.items,
-    DeliverLocation: req.body.DeliverLocation,
-    PersonInformation: req.body.PersonInformation,
-    OrderAmount: req.body.OrderAmount
-  });
-  const order = await userOrder.save();
-  
-  res.status(201).send(order);
-
-}
-catch(err){
-  console.error("error in saving data", err);
-  res.status(500).send({error:"failed to save the order"});
-} 
+    let userOrder = new orderDetail({
+      items: req.body.items,
+      DeliverLocation: req.body.DeliverLocation,
+      PersonInformation: req.body.PersonInformation,
+      OrderAmount: req.body.OrderAmount
+    });
+    const order = await userOrder.save();
+    
+    res.status(201).send(order);
+    
+  }
+  catch(err){
+    console.error("error in saving data", err);
+    res.status(500).send({error:"failed to save the order"});
+  } 
 })
 
 server.get('/newbashyalgeneralstore/orderedItems', async (req,res)=>{
   const order = await orderDetail.find();
   
+  // const productsInfo = await products.find();
   res.json(order);
 })
 server.delete("/newbashyalgeneralstore/orderedItems/:id",async(req,res)=>{
