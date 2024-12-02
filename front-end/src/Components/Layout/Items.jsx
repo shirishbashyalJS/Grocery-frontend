@@ -9,17 +9,27 @@ import { BiSolidArrowToTop } from "react-icons/bi";
 
 export const Items = ({ itemLists, searchValue }) => {
   const [selectedItemList, setSelectedItemList] = useState("ALL");
-  const keys = [Object.keys(itemLists), Object.keys(itemLists.ALL)].flat();
+  const keys = ["ALL", Object.keys(itemLists)].flat();
+  const [bestItems, setBestItems] = useState();
 
   function handleDataFromChild(data) {
     setSelectedItemList(data);
   }
+  useEffect(() => {
+    setBestItems(
+      Object.values(itemLists)
+        .flat()
+        .filter((item) => {
+          return item.bestItem === true;
+        })
+    );
+  }, []);
 
   const [{ x, y }, scrollTo] = useWindowScroll();
   return (
     <section className="items" id="items">
       <div id="bestitems"></div>
-      <BestItems bestItems={itemLists.BESTIIEMS} />
+      {bestItems && <BestItems bestItems={bestItems} />}
       <div className="all-items container">
         <p className="items-title">Menu</p>
         <RadioList sendDataToParent={handleDataFromChild} keys={keys} />

@@ -8,7 +8,7 @@ import { FaSave } from "react-icons/fa";
 export const Product = ({ itemLists }) => {
   const { admin, setAdmin } = useAdmin();
   const { login, setLogin } = useLogin();
-  const All = Object.values(itemLists.ALL).flat();
+  const All = Object.values(itemLists).flat();
   const params = useParams();
   const [selectedProduct, setSelectedProduct] = useState({});
   const [quantity, setQuantity] = useState(1);

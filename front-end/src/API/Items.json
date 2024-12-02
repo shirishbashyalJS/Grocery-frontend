@@ -1,1326 +1,1409 @@
 {
-  "BESTIIEMS": [
+  "VEGETABLES": [
     {
-      "name": "Sprite(250ml)",
-      "image": "../../images/items/sprite.jpg",
-      "rate": 5.99,
-      "unit": "bottle",
-      "available": true
-    },
-    {
-      "name": "Red Blue",
-      "image": "../../images/items/red blue.jpg",
-      "rate": 5.99,
-      "unit": "bottle",
-      "available": true
-    },
-    {
-      "name": "Frooti",
-      "image": "../../images/items/frooti.jpg",
-      "rate": 5.99,
-      "unit": "bottle",
-      "available": true
-    },
-    {
-      "name": "Red Lays",
-      "image": "../../images/items/red lays.jpg",
-      "rate": 5.99,
-      "unit": "pkt",
-      "available": true
+      "name": "Spinach",
+      "image": "../../images/items/Spinach.webp",
+      "rate": 2.49,
+      "unit": "collection",
+      "available": true,
+      "bestItem": false
     },
 
     {
-      "name": "Sugar",
-      "image": "../../images/items/Sugar.webp",
+      "name": "Carrots",
+      "image": "../../images/items/Carrots.webp",
       "rate": 1.99,
       "unit": "kg",
-      "available": true
+      "available": true,
+      "bestItem": false
     },
+
     {
-      "name": "Coke(250ml)",
-      "image": "../../images/items/coke.jpg",
-      "rate": 5.99,
-      "unit": "bottle",
-      "available": true
-    },
-    {
-      "name": "Gyan Flour(5kg)",
-      "image": "../../images/items/gyan flour 5kg.jpg",
-      "rate": 1.99,
-      "unit": "pkt",
-      "available": true
-    },
-    {
-      "name": "Cumin Seeds(unpack)",
-      "image": "../../images/items/Cumin Seeds.webp",
+      "name": "Tomatoes",
+      "image": "../../images/items/Tomatoes.webp",
       "rate": 3.29,
       "unit": "kg",
-      "available": true
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Cucumbers",
+      "image": "../../images/items/Cucumbers.webp",
+      "rate": 0.99,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Garlic",
+      "image": "../../images/items/Garlic.webp",
+      "rate": 0.79,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
     },
 
     {
-      "name": "Common Salt",
-      "image": "../../images/items/common salt.jpg",
-      "rate": 2.29,
-      "unit": "pkt",
-      "available": true
+      "name": "Broccoli",
+      "image": "../../images/items/Broccoli.webp",
+      "rate": 1.99,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
     },
     {
-      "name": "Corn",
-      "image": "../../images/items/corn.jpg",
-      "rate": 2.29,
+      "name": "Radishes",
+      "image": "../../images/items/radish.jpg",
+      "rate": 1.29,
       "unit": "kg",
-      "available": true
-    },
-    {
-      "name": "Bhatmas",
-      "image": "../../images/items/bhatmas.webp",
-      "rate": 2.49,
-      "unit": "kg",
-      "available": true
+      "available": true,
+      "bestItem": false
     },
     {
       "name": "Potato",
       "image": "../../images/items/potato.webp",
       "rate": 1.29,
       "unit": "kg",
-      "available": true
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Onion",
+      "image": "../../images/items/onion.webp",
+      "rate": 1.29,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Ginger",
+      "image": "../../images/items/ginger.jpg",
+      "rate": 1.29,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Cauliflower",
+      "image": "../../images/items/cauliflower.jpg",
+      "rate": 1.29,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Capsicum",
+      "image": "../../images/items/capsicum.jpg",
+      "rate": 1.29,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Green Beans",
+      "image": "../../images/items/greenbeans.jpg",
+      "rate": 1.29,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Long Beans",
+      "image": "../../images/items/longbeans.jpg",
+      "rate": 1.29,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Cabbage",
+      "image": "../../images/items/cabbage.jpg",
+      "rate": 1.29,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Chilli",
+      "image": "../../images/items/chilli.jpg",
+      "rate": 1.29,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
     }
   ],
-  "ALL": {
-    "VEGETABLES": [
-      {
-        "name": "Spinach",
-        "image": "../../images/items/Spinach.webp",
-        "rate": 2.49,
-        "unit": "collection",
-        "available": true
-      },
+  "BAKING/SUGAR": [
+    {
+      "name": "Sugar",
+      "image": "../../images/items/Sugar.webp",
+      "rate": 1.99,
+      "unit": "kg",
+      "available": true,
+      "bestItem": true
+    },
+    {
+      "name": "Baking Powder",
+      "image": "../../images/items/Baking Powder.webp",
+      "rate": 1.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Bread",
+      "image": "../../images/items/bread.jpg",
+      "rate": 1.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Bun",
+      "image": "../../images/items/bun.webp",
+      "rate": 1.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Puff",
+      "image": "../../images/items/puff.jpg",
+      "rate": 1.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Cookies",
+      "image": "../../images/items/cookies.webp",
+      "rate": 1.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
 
-      {
-        "name": "Carrots",
-        "image": "../../images/items/Carrots.webp",
-        "rate": 1.99,
-        "unit": "kg",
-        "available": true
-      },
+    {
+      "name": "Gud",
+      "image": "../../images/items/gud.webp",
+      "rate": 1.99,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
+    }
+  ],
+  "FLOUR/SPICES": [
+    {
+      "name": "Sahanai Flour(5kg)",
+      "image": "../../images/items/sahanai.jpg",
+      "rate": 2.49,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Gharana Flour(5kg)",
+      "image": "../../images/items/gharana.jpg",
+      "rate": 1.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Gyan Flour(5kg)",
+      "image": "../../images/items/gyan flour 5kg.jpg",
+      "rate": 1.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": true
+    },
+    {
+      "name": "Mayda",
+      "image": "../../images/items/mayda.jpg",
+      "rate": 2.49,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Oats",
+      "image": "../../images/items/oats.jpg",
+      "rate": 1.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Suji",
+      "image": "../../images/items/suji.jpg",
+      "rate": 1.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": true
+    },
+    {
+      "name": "Chana Besan",
+      "image": "../../images/items/chana besan.jpg",
+      "rate": 1.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": true
+    },
+    {
+      "name": "Pakode Besan",
+      "image": "../../images/items/pakode besan.jpg",
+      "rate": 1.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Soya Bean(200g)",
+      "image": "../../images/items/soyabean.jpg",
+      "rate": 5.49,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": true
+    },
 
-      {
-        "name": "Tomatoes",
-        "image": "../../images/items/Tomatoes.webp",
-        "rate": 3.29,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Cucumbers",
-        "image": "../../images/items/Cucumbers.webp",
-        "rate": 0.99,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Garlic",
-        "image": "../../images/items/Garlic.webp",
-        "rate": 0.79,
-        "unit": "kg",
-        "available": true
-      },
+    {
+      "name": "Chili Powder(25g)",
+      "image": "../../images/items/chili powder 25g.jpg",
+      "rate": 2.49,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Chili Powder(200g)",
+      "image": "../../images/items/chili powder 200g.jpg",
+      "rate": 1.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Black Pepper Small(powder)",
+      "image": "../../images/items/black pepper small.webp",
+      "rate": 1.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Black Pepper Small",
+      "image": "../../images/items/black pepper.jpg",
+      "rate": 2.49,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Century Black Pepper(powder)",
+      "image": "../../images/items/century black pepper.png",
+      "rate": 1.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Cumin Seeds(50g)",
+      "image": "../../images/items/geera.jpg",
+      "rate": 3.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": true
+    },
+    {
+      "name": "Cumin Seeds(100g)",
+      "image": "../../images/items/geera.jpg",
+      "rate": 3.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Cumin Seeds(unpack)",
+      "image": "../../images/items/Cumin Seeds.webp",
+      "rate": 3.29,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Coriander(unpack)",
+      "image": "../../images/items/coriander.jpg",
+      "rate": 2.49,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
+    },
 
-      {
-        "name": "Broccoli",
-        "image": "../../images/items/Broccoli.webp",
-        "rate": 1.99,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Radishes",
-        "image": "../../images/items/radish.jpg",
-        "rate": 1.29,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Potato",
-        "image": "../../images/items/potato.webp",
-        "rate": 1.29,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Onion",
-        "image": "../../images/items/onion.webp",
-        "rate": 1.29,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Ginger",
-        "image": "../../images/items/ginger.jpg",
-        "rate": 1.29,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Cauliflower",
-        "image": "../../images/items/cauliflower.jpg",
-        "rate": 1.29,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Capsicum",
-        "image": "../../images/items/capsicum.jpg",
-        "rate": 1.29,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Green Beans",
-        "image": "../../images/items/greenbeans.jpg",
-        "rate": 1.29,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Long Beans",
-        "image": "../../images/items/longbeans.jpg",
-        "rate": 1.29,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Cabbage",
-        "image": "../../images/items/cabbage.jpg",
-        "rate": 1.29,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Chilli",
-        "image": "../../images/items/chilli.jpg",
-        "rate": 1.29,
-        "unit": "kg",
-        "available": true
-      }
-    ],
-    "BAKING/SUGAR": [
-      {
-        "name": "Sugar",
-        "image": "../../images/items/Sugar.webp",
-        "rate": 1.99,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Baking Powder",
-        "image": "../../images/items/Baking Powder.webp",
-        "rate": 1.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Bread",
-        "image": "../../images/items/bread.jpg",
-        "rate": 1.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Bun",
-        "image": "../../images/items/bun.webp",
-        "rate": 1.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Puff",
-        "image": "../../images/items/puff.jpg",
-        "rate": 1.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Cookies",
-        "image": "../../images/items/cookies.webp",
-        "rate": 1.99,
-        "unit": "pkt",
-        "available": true
-      },
+    {
+      "name": "Turmeric Powder(unpack)",
+      "image": "../../images/items/Turmeric Powder.webp",
+      "rate": 2.29,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Turmeric Powder(25g)",
+      "image": "../../images/items/turmeric powder rara.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Turmeric Powder(200g)",
+      "image": "../../images/items/turmeric powder rara.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Mix Masala(20g)",
+      "image": "../../images/items/mix masala.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Mix Masala(180g)",
+      "image": "../../images/items/mix masala.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Mix Masala(400g)",
+      "image": "../../images/items/mix masala.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Goldiee Masala(200g)",
+      "image": "../../images/items/goldiee.webp",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": true
+    },
+    {
+      "name": "Garam Masala",
+      "image": "../../images/items/garam masala.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": true
+    },
+    {
+      "name": "Fish Masala",
+      "image": "../../images/items/fish masala.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Chat Masala",
+      "image": "../../images/items/chat masala.webp",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Chowmen Masala",
+      "image": "../../images/items/chowmen masala.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Meat Masala",
+      "image": "../../images/items/meat masala.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Momo Masala",
+      "image": "../../images/items/momo masala.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Briyanai Masala",
+      "image": "../../images/items/briyani masala.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Kasmiri Mirch",
+      "image": "../../images/items/kasmiri mirch.png",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Pickle Masala",
+      "image": "../../images/items/pickle masala.webp",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Chicken Masala",
+      "image": "../../images/items/chicken masala.png",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Cumin Powder(100g)",
+      "image": "../../images/items/cumin powder.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Coriander Powder(100g)",
+      "image": "../../images/items/coriander powder.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Coriander Powder(200g)",
+      "image": "../../images/items/coriander powder.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Common Salt",
+      "image": "../../images/items/common salt.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Black Salt",
+      "image": "../../images/items/bire nun.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Sidhe Nun",
+      "image": "../../images/items/sidhe nun.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    }
+  ],
+  "GRAINS/LENTILS": [
+    {
+      "name": "Steam Rice",
+      "image": "../../images/items/steam rice.jpg",
+      "rate": 2.49,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Sama Rice",
+      "image": "../../images/items/sama.jpg",
+      "rate": 2.49,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Newari Basmati",
+      "image": "../../images/items/newari rice.png",
+      "rate": 2.49,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": true
+    },
+    {
+      "name": "India Gate Basmati",
+      "image": "../../images/items/india gate.webp",
+      "rate": 2.49,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": true
+    },
+    {
+      "name": "Masoor Dal",
+      "image": "../../images/items/masoor dal.jpg",
+      "rate": 2.49,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Arhar Dal",
+      "image": "../../images/items/arhar dal.jpg",
+      "rate": 2.49,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Chana Dal",
+      "image": "../../images/items/chana dal.jpg",
+      "rate": 2.49,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Mung Dal",
+      "image": "../../images/items/mung dal.webp",
+      "rate": 2.49,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Green Mung Dal",
+      "image": "../../images/items/green mung dal.webp",
+      "rate": 2.49,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Matar Dal",
+      "image": "../../images/items/matar dal.webp",
+      "rate": 2.49,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Mix Dal",
+      "image": "../../images/items/mix dal.jpg",
+      "rate": 2.49,
+      "unit": "kg",
+      "available": true,
+      "bestItem": true
+    },
+    {
+      "name": "Black Urad Dal",
+      "image": "../../images/items/urad dal.webp",
+      "rate": 2.49,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "pea",
+      "image": "../../images/items/pea.jpg",
+      "rate": 2.49,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Chana",
+      "image": "../../images/items/chana.webp",
+      "rate": 2.49,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Corn",
+      "image": "../../images/items/corn.jpg",
+      "rate": 2.29,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Bhatmas",
+      "image": "../../images/items/bhatmas.webp",
+      "rate": 2.49,
+      "unit": "kg",
+      "available": true,
+      "bestItem": false
+    }
+  ],
 
-      {
-        "name": "Gud",
-        "image": "../../images/items/gud.webp",
-        "rate": 1.99,
-        "unit": "kg",
-        "available": true
-      }
-    ],
-    "FLOUR/SPICES": [
-      {
-        "name": "Sahanai Flour(5kg)",
-        "image": "../../images/items/sahanai.jpg",
-        "rate": 2.49,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Gharana Flour(5kg)",
-        "image": "../../images/items/gharana.jpg",
-        "rate": 1.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Gyan Flour(5kg)",
-        "image": "../../images/items/gyan flour 5kg.jpg",
-        "rate": 1.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Mayda",
-        "image": "../../images/items/mayda.jpg",
-        "rate": 2.49,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Oats",
-        "image": "../../images/items/oats.jpg",
-        "rate": 1.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Suji",
-        "image": "../../images/items/suji.jpg",
-        "rate": 1.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Chana Besan",
-        "image": "../../images/items/chana besan.jpg",
-        "rate": 1.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Pakode Besan",
-        "image": "../../images/items/pakode besan.jpg",
-        "rate": 1.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Soya Bean(200g)",
-        "image": "../../images/items/soyabean.jpg",
-        "rate": 5.49,
-        "unit": "pkt",
-        "available": true
-      },
-
-      {
-        "name": "Chili Powder(25g)",
-        "image": "../../images/items/chili powder 25g.jpg",
-        "rate": 2.49,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Chili Powder(200g)",
-        "image": "../../images/items/chili powder 200g.jpg",
-        "rate": 1.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Black Pepper Small(powder)",
-        "image": "../../images/items/black pepper small.webp",
-        "rate": 1.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Black Pepper Small",
-        "image": "../../images/items/black pepper.jpg",
-        "rate": 2.49,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Century Black Pepper(powder)",
-        "image": "../../images/items/century black pepper.png",
-        "rate": 1.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Cumin Seeds(50g)",
-        "image": "../../images/items/geera.jpg",
-        "rate": 3.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Cumin Seeds(100g)",
-        "image": "../../images/items/geera.jpg",
-        "rate": 3.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Cumin Seeds(unpack)",
-        "image": "../../images/items/Cumin Seeds.webp",
-        "rate": 3.29,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Coriander(unpack)",
-        "image": "../../images/items/coriander.jpg",
-        "rate": 2.49,
-        "unit": "kg",
-        "available": true
-      },
-
-      {
-        "name": "Turmeric Powder(unpack)",
-        "image": "../../images/items/Turmeric Powder.webp",
-        "rate": 2.29,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Turmeric Powder(25g)",
-        "image": "../../images/items/turmeric powder rara.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Turmeric Powder(200g)",
-        "image": "../../images/items/turmeric powder rara.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Mix Masala(20g)",
-        "image": "../../images/items/mix masala.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Mix Masala(180g)",
-        "image": "../../images/items/mix masala.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Mix Masala(400g)",
-        "image": "../../images/items/mix masala.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Goldiee Masala(200g)",
-        "image": "../../images/items/goldiee.webp",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Garam Masala",
-        "image": "../../images/items/garam masala.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Fish Masala",
-        "image": "../../images/items/fish masala.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Chat Masala",
-        "image": "../../images/items/chat masala.webp",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Chowmen Masala",
-        "image": "../../images/items/chowmen masala.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Meat Masala",
-        "image": "../../images/items/meat masala.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Momo Masala",
-        "image": "../../images/items/momo masala.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Briyanai Masala",
-        "image": "../../images/items/briyani masala.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Kasmiri Mirch",
-        "image": "../../images/items/kasmiri mirch.png",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Pickle Masala",
-        "image": "../../images/items/pickle masala.webp",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Chicken Masala",
-        "image": "../../images/items/chicken masala.png",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Cumin Powder(100g)",
-        "image": "../../images/items/cumin powder.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Coriander Powder(100g)",
-        "image": "../../images/items/coriander powder.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Coriander Powder(200g)",
-        "image": "../../images/items/coriander powder.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Common Salt",
-        "image": "../../images/items/common salt.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Black Salt",
-        "image": "../../images/items/bire nun.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Sidhe Nun",
-        "image": "../../images/items/sidhe nun.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      }
-    ],
-    "GRAINS/LENTILS": [
-      {
-        "name": "Steam Rice",
-        "image": "../../images/items/steam rice.jpg",
-        "rate": 2.49,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Sama Rice",
-        "image": "../../images/items/sama.jpg",
-        "rate": 2.49,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Newari Basmati",
-        "image": "../../images/items/newari rice.png",
-        "rate": 2.49,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "India Gate Basmati",
-        "image": "../../images/items/india gate.webp",
-        "rate": 2.49,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Masoor Dal",
-        "image": "../../images/items/masoor dal.jpg",
-        "rate": 2.49,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Arhar Dal",
-        "image": "../../images/items/arhar dal.jpg",
-        "rate": 2.49,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Chana Dal",
-        "image": "../../images/items/chana dal.jpg",
-        "rate": 2.49,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Mung Dal",
-        "image": "../../images/items/mung dal.webp",
-        "rate": 2.49,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Green Mung Dal",
-        "image": "../../images/items/green mung dal.webp",
-        "rate": 2.49,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Matar Dal",
-        "image": "../../images/items/matar dal.webp",
-        "rate": 2.49,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Mix Dal",
-        "image": "../../images/items/mix dal.jpg",
-        "rate": 2.49,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Black Urad Dal",
-        "image": "../../images/items/urad dal.webp",
-        "rate": 2.49,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "pea",
-        "image": "../../images/items/pea.jpg",
-        "rate": 2.49,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Chana",
-        "image": "../../images/items/chana.webp",
-        "rate": 2.49,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Corn",
-        "image": "../../images/items/corn.jpg",
-        "rate": 2.29,
-        "unit": "kg",
-        "available": true
-      },
-      {
-        "name": "Bhatmas",
-        "image": "../../images/items/bhatmas.webp",
-        "rate": 2.49,
-        "unit": "kg",
-        "available": true
-      }
-    ],
-
-    "OILS/SAUCE": [
-      {
-        "name": "Vinegar",
-        "image": "../../images/items/vinegar.jpg",
-        "rate": 5.49,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Tomato Ketchup(200g)",
-        "image": "../../images/items/tomato katchup.jpg",
-        "rate": 5.49,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Tomato Ketchup(500g)",
-        "image": "../../images/items/tomato katchup.jpg",
-        "rate": 5.49,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Soya Sauce(200g)",
-        "image": "../../images/items/soya sauce.jpg",
-        "rate": 5.49,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Chili Sauce(200g)",
-        "image": "../../images/items/chily sauce.png",
-        "rate": 5.49,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Coconut Oil",
-        "image": "../../images/items/coconut oil.jpg",
-        "rate": 7.99,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Clear Hair Oil(75ml)",
-        "image": "../../images/items/clear.jpg",
-        "rate": 5.49,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Clear Hair Oil(150ml)",
-        "image": "../../images/items/clear.jpg",
-        "rate": 5.49,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Prostyle(75ml)",
-        "image": "../../images/items/prostyle.jpeg",
-        "rate": 5.49,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Bajaj Almod Oil(100g)",
-        "image": "../../images/items/bajaj almod.jpg",
-        "rate": 5.49,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Dabur Amla(75ml)",
-        "image": "../../images/items/dabour amala.jpg",
-        "rate": 5.49,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Honey",
-        "image": "../../images/items/Honey.webp",
-        "rate": 4.99,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Sesame Oil(Small)",
-        "image": "../../images/items/sesame oil.jpg",
-        "rate": 5.99,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Sesame Oil(Big)",
-        "image": "../../images/items/sesame oil.jpg",
-        "rate": 5.99,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Sunflower Oil(500ml)",
-        "image": "../../images/items/sunflower oil.jpg",
-        "rate": 5.49,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Mustard Oil(500ml)",
-        "image": "../../images/items/mustard oil.webp",
-        "rate": 5.49,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Soyabean Oil(500ml)",
-        "image": "../../images/items/soyabean nil.jpg",
-        "rate": 5.49,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Mustard Oil(1000ml)",
-        "image": "../../images/items/mustard oil 1l.jpg",
-        "rate": 5.49,
-        "unit": "bottle",
-        "available": true
-      }
-    ],
-    "CARE/CLEANING": [
-      {
-        "name": "Sunsilk Black Sheet",
-        "image": "../../images/items/sunsilk black sheet.jpg",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Sunsilk Black Bottle",
-        "image": "../../images/items/sunsilk black bottle.jpeg",
-        "rate": 5.99,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Sunsilk Pink Sheet",
-        "image": "../../images/items/sunsilk pink sheet.jpg",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Sunsilk Pink Sheet",
-        "image": "../../images/items/sunsilk pink bottle.webp",
-        "rate": 5.99,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Sunsilk Golden Sheet",
-        "image": "../../images/items/sunsilk golden sheet.jpg",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Sunsilk Golden Bottle",
-        "image": "../../images/items/sunsilk golden bottle.jpeg",
-        "rate": 5.99,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Sunsilk Onion Bottle",
-        "image": "../../images/items/onion sampoo.jpg",
-        "rate": 5.99,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Liril",
-        "image": "../../images/items/liril.webp",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Lifebuoy",
-        "image": "../../images/items/lifebuoy.jpg",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Dettol",
-        "image": "../../images/items/dettol.png",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Lux",
-        "image": "../../images/items/lux.jpg",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "No 1",
-        "image": "../../images/items/no1.jpg",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "AXN Soap",
-        "image": "../../images/items/axn.jpg",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Harapatta Detergent(1kg)",
-        "image": "../../images/items/harapatta.webp",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Harapatta Detergent(500g)",
-        "image": "../../images/items/harapatta.webp",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Ghai Chap Detergent(1kg)",
-        "image": "../../images/items/ghai chap.jpg",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Tide Detergent(1kg)",
-        "image": "../../images/items/tide yellow.png",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Tide Detergent(1kg)",
-        "image": "../../images/items/tide red.jpg",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Black Phenyl",
-        "image": "../../images/items/black phenyl.jpg",
-        "rate": 5.99,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Colgate Paste(Big)",
-        "image": "../../images/items/colgate paste.jpg",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Colgate Paste(Small)",
-        "image": "../../images/items/colgate paste.jpg",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Dabour Paste(Big)",
-        "image": "../../images/items/dabour paste.jpg",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Dabour Paste(Small)",
-        "image": "../../images/items/dabour paste.jpg",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Pepsodent Paste(Small)",
-        "image": "../../images/items/pepsodent paste.jpg",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Closeup Paste(Small)",
-        "image": "../../images/items/closeup paste.jpg",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      }
-    ],
-    "DRINK/CHIPS": [
-      {
-        "name": "Sprite(250ml)",
-        "image": "../../images/items/sprite.jpg",
-        "rate": 5.99,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Sprite(700ml)",
-        "image": "../../images/items/sprite.jpg",
-        "rate": 5.99,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Sprite(1.5L)",
-        "image": "../../images/items/sprite.jpg",
-        "rate": 5.99,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Sprite(2L)",
-        "image": "../../images/items/sprite.jpg",
-        "rate": 5.99,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Sprite(2.25L)",
-        "image": "../../images/items/sprite.jpg",
-        "rate": 5.99,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Coke(250ml)",
-        "image": "../../images/items/coke.jpg",
-        "rate": 5.99,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Coke(700ml)",
-        "image": "../../images/items/coke.jpg",
-        "rate": 5.99,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Coke(1.5L)",
-        "image": "../../images/items/coke.jpg",
-        "rate": 5.99,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Coke(2L)",
-        "image": "../../images/items/coke.jpg",
-        "rate": 5.99,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Coke(2.25L)",
-        "image": "../../images/items/coke.jpg",
-        "rate": 5.99,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Fanta(250ml)",
-        "image": "../../images/items/fanta.jpg",
-        "rate": 5.99,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Fanta(1.5L)",
-        "image": "../../images/items/fanta.jpg",
-        "rate": 5.99,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Fanta(2L)",
-        "image": "../../images/items/fanta.jpg",
-        "rate": 5.99,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Red Blue",
-        "image": "../../images/items/red blue.jpg",
-        "rate": 5.99,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Frooti",
-        "image": "../../images/items/frooti.jpg",
-        "rate": 5.99,
-        "unit": "bottle",
-        "available": true
-      },
-      {
-        "name": "Red Lays",
-        "image": "../../images/items/red lays.jpg",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Blue Lays",
-        "image": "../../images/items/blue lays.webp",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Green Lays",
-        "image": "../../images/items/green lays.jpg",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Kurkure",
-        "image": "../../images/items/kurkure.jpg",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Current Kurkure",
-        "image": "../../images/items/current kurkure.jpg",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Current Cheeseballs",
-        "image": "../../images/items/current cheeseball.jpg",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "2PM",
-        "image": "../../images/items/2pm.png",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Current",
-        "image": "../../images/items/current noodles.jpg",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Current Chowchow",
-        "image": "../../images/items/current chowchow.png",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Lali",
-        "image": "../../images/items/lali.jpg",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "rara",
-        "image": "../../images/items/rara.jpg",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Lali Hot",
-        "image": "../../images/items/lali hot.jpg",
-        "rate": 5.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Bhaju",
-        "image": "../../images/items/bhaju.jpg",
-        "rate": 1.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Prawn",
-        "image": "../../images/items/prawn.jpg",
-        "rate": 1.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Papad",
-        "image": "../../images/items/papad.jpg",
-        "rate": 1.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Panjabi Tadka",
-        "image": "../../images/items/panjabi tadka.jpg",
-        "rate": 1.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Panipuri",
-        "image": "../../images/items/panipuri.jpg",
-        "rate": 1.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Furandana",
-        "image": "../../images/items/furandana.jpg",
-        "rate": 1.99,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Chewra",
-        "image": "../../images/items/chewra.jpg",
-        "rate": 1.99,
-        "unit": "pkt",
-        "available": true
-      }
-    ],
-    "DRYFRUITS/BISCUIT": [
-      {
-        "name": "Almond(250g)",
-        "image": "../../images/items/almod.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Almond(100g)",
-        "image": "../../images/items/almod.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Kaju(250g)",
-        "image": "../../images/items/kaju.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Kaju(1000g)",
-        "image": "../../images/items/kaju.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Kismis(250g)",
-        "image": "../../images/items/kismis.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Kismis(100g)",
-        "image": "../../images/items/kismis.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Parle G Biscuit",
-        "image": "../../images/items/parleg.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "20-20 Biscuit",
-        "image": "../../images/items/2020biscuit.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Pineapple Biscuit",
-        "image": "../../images/items/pineapple biscuit.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Oreo Biscuit",
-        "image": "../../images/items/oreo.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Cheese Craker Biscuit",
-        "image": "../../images/items/cheesecraker.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Coconut Biscuit",
-        "image": "../../images/items/coconut.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Coconut Biscuit(Big)",
-        "image": "../../images/items/coconut.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Top Biscuit",
-        "image": "../../images/items/top.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "50-50 Biscuit",
-        "image": "../../images/items/5050biscuit.jpg",
-        "rate": 2.29,
-        "unit": "pkt",
-        "available": true
-      },
-      {
-        "name": "Rusk",
-        "image": "../../images/items/rusk.jpg",
-        "rate": 1.99,
-        "unit": "pkt",
-        "available": true
-      }
-    ]
-  }
+  "OILS/SAUCE": [
+    {
+      "name": "Vinegar",
+      "image": "../../images/items/vinegar.jpg",
+      "rate": 5.49,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Tomato Ketchup(200g)",
+      "image": "../../images/items/tomato katchup.jpg",
+      "rate": 5.49,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Tomato Ketchup(500g)",
+      "image": "../../images/items/tomato katchup.jpg",
+      "rate": 5.49,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Soya Sauce(200g)",
+      "image": "../../images/items/soya sauce.jpg",
+      "rate": 5.49,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Chili Sauce(200g)",
+      "image": "../../images/items/chily sauce.png",
+      "rate": 5.49,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Coconut Oil",
+      "image": "../../images/items/coconut oil.jpg",
+      "rate": 7.99,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Clear Hair Oil(75ml)",
+      "image": "../../images/items/clear.jpg",
+      "rate": 5.49,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Clear Hair Oil(150ml)",
+      "image": "../../images/items/clear.jpg",
+      "rate": 5.49,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Prostyle(75ml)",
+      "image": "../../images/items/prostyle.jpeg",
+      "rate": 5.49,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Bajaj Almod Oil(100g)",
+      "image": "../../images/items/bajaj almod.jpg",
+      "rate": 5.49,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Dabur Amla(75ml)",
+      "image": "../../images/items/dabour amala.jpg",
+      "rate": 5.49,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Honey",
+      "image": "../../images/items/Honey.webp",
+      "rate": 4.99,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Sesame Oil(Small)",
+      "image": "../../images/items/sesame oil.jpg",
+      "rate": 5.99,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Sesame Oil(Big)",
+      "image": "../../images/items/sesame oil.jpg",
+      "rate": 5.99,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Sunflower Oil(500ml)",
+      "image": "../../images/items/sunflower oil.jpg",
+      "rate": 5.49,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Mustard Oil(500ml)",
+      "image": "../../images/items/mustard oil.webp",
+      "rate": 5.49,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Soyabean Oil(500ml)",
+      "image": "../../images/items/soyabean nil.jpg",
+      "rate": 5.49,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Mustard Oil(1000ml)",
+      "image": "../../images/items/mustard oil 1l.jpg",
+      "rate": 5.49,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    }
+  ],
+  "CARE/CLEANING": [
+    {
+      "name": "Sunsilk Black Sheet",
+      "image": "../../images/items/sunsilk black sheet.jpg",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Sunsilk Black Bottle",
+      "image": "../../images/items/sunsilk black bottle.jpeg",
+      "rate": 5.99,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Sunsilk Pink Sheet",
+      "image": "../../images/items/sunsilk pink sheet.jpg",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Sunsilk Pink Sheet",
+      "image": "../../images/items/sunsilk pink bottle.webp",
+      "rate": 5.99,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Sunsilk Golden Sheet",
+      "image": "../../images/items/sunsilk golden sheet.jpg",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Sunsilk Golden Bottle",
+      "image": "../../images/items/sunsilk golden bottle.jpeg",
+      "rate": 5.99,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Sunsilk Onion Bottle",
+      "image": "../../images/items/onion sampoo.jpg",
+      "rate": 5.99,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Liril",
+      "image": "../../images/items/liril.webp",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Lifebuoy",
+      "image": "../../images/items/lifebuoy.jpg",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Dettol",
+      "image": "../../images/items/dettol.png",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Lux",
+      "image": "../../images/items/lux.jpg",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": true
+    },
+    {
+      "name": "No 1",
+      "image": "../../images/items/no1.jpg",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "AXN Soap",
+      "image": "../../images/items/axn.jpg",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Harapatta Detergent(1kg)",
+      "image": "../../images/items/harapatta.webp",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Harapatta Detergent(500g)",
+      "image": "../../images/items/harapatta.webp",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Ghai Chap Detergent(1kg)",
+      "image": "../../images/items/ghai chap.jpg",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Tide Detergent(1kg)",
+      "image": "../../images/items/tide yellow.png",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Tide Detergent(1kg)",
+      "image": "../../images/items/tide red.jpg",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Black Phenyl",
+      "image": "../../images/items/black phenyl.jpg",
+      "rate": 5.99,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Colgate Paste(Big)",
+      "image": "../../images/items/colgate paste.jpg",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Colgate Paste(Small)",
+      "image": "../../images/items/colgate paste.jpg",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Dabour Paste(Big)",
+      "image": "../../images/items/dabour paste.jpg",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Dabour Paste(Small)",
+      "image": "../../images/items/dabour paste.jpg",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Pepsodent Paste(Small)",
+      "image": "../../images/items/pepsodent paste.jpg",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Closeup Paste(Small)",
+      "image": "../../images/items/closeup paste.jpg",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    }
+  ],
+  "DRINK/CHIPS": [
+    {
+      "name": "Sprite(250ml)",
+      "image": "../../images/items/sprite.jpg",
+      "rate": 5.99,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Sprite(700ml)",
+      "image": "../../images/items/sprite.jpg",
+      "rate": 5.99,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Sprite(1.5L)",
+      "image": "../../images/items/sprite.jpg",
+      "rate": 5.99,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Sprite(2L)",
+      "image": "../../images/items/sprite.jpg",
+      "rate": 5.99,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": true
+    },
+    {
+      "name": "Sprite(2.25L)",
+      "image": "../../images/items/sprite.jpg",
+      "rate": 5.99,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Coke(250ml)",
+      "image": "../../images/items/coke.jpg",
+      "rate": 5.99,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Coke(700ml)",
+      "image": "../../images/items/coke.jpg",
+      "rate": 5.99,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Coke(1.5L)",
+      "image": "../../images/items/coke.jpg",
+      "rate": 5.99,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Coke(2L)",
+      "image": "../../images/items/coke.jpg",
+      "rate": 5.99,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": true
+    },
+    {
+      "name": "Coke(2.25L)",
+      "image": "../../images/items/coke.jpg",
+      "rate": 5.99,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Fanta(250ml)",
+      "image": "../../images/items/fanta.jpg",
+      "rate": 5.99,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Fanta(1.5L)",
+      "image": "../../images/items/fanta.jpg",
+      "rate": 5.99,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Fanta(2L)",
+      "image": "../../images/items/fanta.jpg",
+      "rate": 5.99,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Red Blue",
+      "image": "../../images/items/red blue.jpg",
+      "rate": 5.99,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": true
+    },
+    {
+      "name": "Frooti",
+      "image": "../../images/items/frooti.jpg",
+      "rate": 5.99,
+      "unit": "bottle",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Red Lays",
+      "image": "../../images/items/red lays.jpg",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Blue Lays",
+      "image": "../../images/items/blue lays.webp",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Green Lays",
+      "image": "../../images/items/green lays.jpg",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Kurkure",
+      "image": "../../images/items/kurkure.jpg",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Current Kurkure",
+      "image": "../../images/items/current kurkure.jpg",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Current Cheeseballs",
+      "image": "../../images/items/current cheeseball.jpg",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "2PM",
+      "image": "../../images/items/2pm.png",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Current",
+      "image": "../../images/items/current noodles.jpg",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Current Chowchow",
+      "image": "../../images/items/current chowchow.png",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Lali",
+      "image": "../../images/items/lali.jpg",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "rara",
+      "image": "../../images/items/rara.jpg",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Lali Hot",
+      "image": "../../images/items/lali hot.jpg",
+      "rate": 5.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Bhaju",
+      "image": "../../images/items/bhaju.jpg",
+      "rate": 1.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Prawn",
+      "image": "../../images/items/prawn.jpg",
+      "rate": 1.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Papad",
+      "image": "../../images/items/papad.jpg",
+      "rate": 1.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Panjabi Tadka",
+      "image": "../../images/items/panjabi tadka.jpg",
+      "rate": 1.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Panipuri",
+      "image": "../../images/items/panipuri.jpg",
+      "rate": 1.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Furandana",
+      "image": "../../images/items/furandana.jpg",
+      "rate": 1.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Chewra",
+      "image": "../../images/items/chewra.jpg",
+      "rate": 1.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    }
+  ],
+  "DRYFRUITS/BISCUIT": [
+    {
+      "name": "Almond(250g)",
+      "image": "../../images/items/almod.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Almond(100g)",
+      "image": "../../images/items/almod.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Kaju(250g)",
+      "image": "../../images/items/kaju.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Kaju(1000g)",
+      "image": "../../images/items/kaju.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Kismis(250g)",
+      "image": "../../images/items/kismis.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Kismis(100g)",
+      "image": "../../images/items/kismis.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Parle G Biscuit",
+      "image": "../../images/items/parleg.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "20-20 Biscuit",
+      "image": "../../images/items/2020biscuit.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Pineapple Biscuit",
+      "image": "../../images/items/pineapple biscuit.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Oreo Biscuit",
+      "image": "../../images/items/oreo.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Cheese Craker Biscuit",
+      "image": "../../images/items/cheesecraker.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Coconut Biscuit",
+      "image": "../../images/items/coconut.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Coconut Biscuit(Big)",
+      "image": "../../images/items/coconut.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Top Biscuit",
+      "image": "../../images/items/top.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "50-50 Biscuit",
+      "image": "../../images/items/5050biscuit.jpg",
+      "rate": 2.29,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    },
+    {
+      "name": "Rusk",
+      "image": "../../images/items/rusk.jpg",
+      "rate": 1.99,
+      "unit": "pkt",
+      "available": true,
+      "bestItem": false
+    }
+  ]
 }

@@ -29,13 +29,11 @@ export const RemainingItems = ({
     if (confirm.toLowerCase() == item.name.toLowerCase()) console.log(item);
   };
   useEffect(() => {
-    const All = Object.values(itemLists.ALL).flat();
+    const All = Object.values(itemLists).flat();
 
     const displayItems = () => {
       let itemsToDisplay =
-        selectedItemList === "ALL"
-          ? All
-          : itemLists.ALL[selectedItemList] || [];
+        selectedItemList === "ALL" ? All : itemLists[selectedItemList] || [];
 
       // Filter items based on searchValue
 
