@@ -31,9 +31,12 @@ export const BuyProduct = ({ cart, setCart }) => {
         .then((result) => {
           showSuccessFunction();
           // console.log(result);
+          setCart([]);
         })
         .catch((err) => {
           alert("Failed to order items");
+          setOrder([]);
+          setOrderAmt(0);
         });
     }
   }, [order]);
@@ -81,7 +84,6 @@ export const BuyProduct = ({ cart, setCart }) => {
     setOrder([...cart]);
     setOrderAmt(cartTotalAmount);
 
-    setCart([]);
     setShowModal(false);
   };
 
