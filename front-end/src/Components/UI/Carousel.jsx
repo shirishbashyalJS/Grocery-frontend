@@ -78,16 +78,16 @@ export const Carousel = () => {
           <span className="visually-hidden">Next</span>
         </button>
         <div className="gradient-carousel"></div>
-      </div>
 
-      <div className="carousel-content">
-        <p>Welcome To Online Grocery Store</p>
-        <p>
-          Let's Get Started..
-          <a href="#bestitems">
-            <FaArrowCircleRight style={{ color: "white" }} />
-          </a>
-        </p>
+        <div className="carousel-content">
+          <p>Welcome To Online Grocery Store</p>
+          <p>
+            Let's Get Started..
+            <a href="#bestitems">
+              <FaArrowCircleRight style={{ color: "white" }} />
+            </a>
+          </p>
+        </div>
       </div>
     </section>
   );
