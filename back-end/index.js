@@ -15,7 +15,20 @@ mongoose.connect('mongodb://localhost:27017/Grocery').then((e) =>
   console.log(err)
 );
 
+//Products
 
+server.get('/newbashyalgeneralstore/products',async (req,res)=>{
+  const productsInfo = await products.find();
+  res.json(productsInfo)
+})
+// server.get('/newbashyalgeneralstore/products/:name',async (req,res)=>{
+//   const name = req.params;
+//   const productInfo = await products.find();
+//   res.json(productsInfo)
+// })
+
+
+// OrderedItems
 
 server.post("/newbashyalgeneralstore/orderedItems",async (req,res)=> {
   try{
@@ -39,7 +52,6 @@ server.post("/newbashyalgeneralstore/orderedItems",async (req,res)=> {
 server.get('/newbashyalgeneralstore/orderedItems', async (req,res)=>{
   const order = await orderDetail.find();
   
-  // const productsInfo = await products.find();
   res.json(order);
 })
 server.delete("/newbashyalgeneralstore/orderedItems/:id",async(req,res)=>{
@@ -60,6 +72,11 @@ server.delete("/newbashyalgeneralstore/orderedItems/:id",async(req,res)=>{
   }
   
 })
+
+
+
+
+// Server Listen
 
 server.listen(port, ()=>{
   console.log(`listening at port ${port}`);
