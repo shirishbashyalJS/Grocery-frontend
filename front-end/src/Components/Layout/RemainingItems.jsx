@@ -121,7 +121,7 @@ export const RemainingItems = ({
               <h3 className="card-name">{item.name}</h3>
               <div className="card-rate mb-3">
                 <span>Rate: </span>
-                <span className="stars">{item.rate}</span>
+                <span className="stars">Rs {item.rate}</span>
               </div>
 
               <NavLink to={`/product/${item._id}`} className="NavLink">

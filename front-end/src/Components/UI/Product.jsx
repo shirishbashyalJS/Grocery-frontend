@@ -104,7 +104,7 @@ export const Product = ({ itemLists }) => {
           </div>
           <div className="card-rate fs-3">
             <span>Rate: </span>
-            <span className="stars">{selectedProduct.rate}</span>
+            <span className="stars">Rs {selectedProduct.rate}</span>
           </div>
           {editMode && (
             <div className="card-rate fs-3">
@@ -133,7 +133,7 @@ export const Product = ({ itemLists }) => {
               </div>
               <div className="total-price-container fs-3">
                 <p className="total-price">
-                  Total Amount: {Math.round(selectedProduct.rate * quantity)}
+                  Total Amount: Rs {selectedProduct.rate * quantity}
                 </p>
               </div>
               <button
@@ -141,7 +141,7 @@ export const Product = ({ itemLists }) => {
                 onClick={() => {
                   handleAddToCart(
                     selectedProduct,
-                    Math.round(selectedProduct.rate * quantity),
+                    selectedProduct.rate * quantity,
                     quantity
                   );
                 }}
