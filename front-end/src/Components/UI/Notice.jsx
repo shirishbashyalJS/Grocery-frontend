@@ -1,4 +1,4 @@
-export const Notice = () => {
+export const Notice = ({ adminDetail }) => {
   return (
     <div className="accordion" id="accordionExample">
       <div
@@ -32,13 +32,7 @@ export const Notice = () => {
           className="accordion-collapse collapse show"
           data-bs-parent="#accordionExample"
         >
-          <div className="accordion-body">
-            Notice!! We offer free delivery charge for order with amount more
-            than Rs 500 upto 1km radius. Order interval will be from 7 AM to
-            5PM. Cancellation order feature is not available. Ordered Item will
-            be available within 1 hr and 1km radius. For contact view contact
-            page.
-          </div>
+          <div className="accordion-body">{adminDetail.notice}</div>
         </div>
       </div>
     </div>

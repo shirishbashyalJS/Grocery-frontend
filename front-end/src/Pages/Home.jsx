@@ -5,14 +5,14 @@ import { useOutletContext } from "react-router-dom";
 import { useLogin } from "../Components/Layout/Layout";
 import { Notice } from "../Components/UI/Notice";
 
-export const Home = ({ itemLists }) => {
+export const Home = ({ itemLists, adminDetail }) => {
   const { searchValue } = useOutletContext();
 
   return (
     <section className="home">
       <hr />
 
-      <Notice />
+      <Notice adminDetail={adminDetail} />
       <Carousel />
       <Items itemLists={itemLists} searchValue={searchValue} />
     </section>

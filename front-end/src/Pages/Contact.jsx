@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-export const Contact = () => {
+export const Contact = ({ adminDetail }) => {
   return (
     <section
       className="contact d-flex align-items-center"
@@ -28,7 +28,7 @@ export const Contact = () => {
             </p>
             <p className="fs-4">
               <span className="text-secondary">Contact Number: </span>
-              +977-9802464310
+              +977-{adminDetail.contact}
             </p>
           </div>
         </div>

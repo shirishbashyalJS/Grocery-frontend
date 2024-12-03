@@ -3,19 +3,19 @@ import { Header } from "../UI/Header";
 import { Footer } from "../UI/Footer";
 import { createContext, useContext, useEffect, useState } from "react";
 
-
 const LoginContext = createContext();
 const CartContext = createContext();
 const UserContext = createContext();
 const AdminContext = createContext();
-export const Layout = () => {
+export const Layout = ({ adminDetail }) => {
   const [user, setUser] = useState(() => {
     const storedUser = localStorage.getItem("user");
     return storedUser ? JSON.parse(storedUser) : {};
   });
   const [admin, setAdmin] = useState(() => {
     return (
-      user.email == "shirishbashyal2@gmail.com" && user.password == "Shirish.@1"
+      user.email == adminDetail.admin.username &&
+      user.password == adminDetail.admin.password
     );
   });
   const [searchValue, setSearchValue] = useState(null);
@@ -30,9 +30,6 @@ export const Layout = () => {
     return storedCart ? JSON.parse(storedCart) : [];
   });
   useEffect(() => {
-    console.log("admin:" + admin);
-    // console.log(login);
-
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
   useEffect(() => {

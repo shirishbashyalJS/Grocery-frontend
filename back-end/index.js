@@ -5,6 +5,7 @@ const mongoose = require("mongoose")
 const orderDetail = require("./Modal/orderModel");
 const port = 2081;
 const products = require("./Modal/itemModel");
+const adminDetail = require("./Modal/AdminModal");
 
 server.use(cors());
 server.use(express.json()) 
@@ -74,6 +75,13 @@ server.delete("/newbashyalgeneralstore/orderedItems/:id",async(req,res)=>{
 })
 
 
+
+//admin username and password and notice and contact
+
+server.get("/newbashyalgeneralstore/admindetail", async(req,res)=>{
+  const data = await adminDetail.find();
+  res.json(data);
+})
 
 
 // Server Listen

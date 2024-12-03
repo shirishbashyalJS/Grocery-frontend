@@ -14,7 +14,9 @@ import axios from "axios";
 
 const App = () => {
   const productsUrl = "http://localhost:2081/newbashyalgeneralstore/products";
+  const adminUrl = "http://localhost:2081/newbashyalgeneralstore/admindetail";
   const [itemLists, setItemLists] = useState();
+  const [adminDetail, setAdminDetail] = useState();
   useEffect(() => {
     axios
       .get(productsUrl)
@@ -30,18 +32,26 @@ const App = () => {
       .catch((err) => {
         console.log(err);
       });
+    axios
+      .get(adminUrl)
+      .then((result) => {
+        setAdminDetail(result.data[0]);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
-  if (itemLists) {
+  if (itemLists && adminDetail) {
     const router = createBrowserRouter([
       {
         path: "/",
-        element: <Layout />,
+        element: <Layout adminDetail={adminDetail} />,
         errorElement: <ErrPage />,
 
         children: [
           {
             path: "/",
-            element: <Home itemLists={itemLists} />,
+            element: <Home itemLists={itemLists} adminDetail={adminDetail} />,
           },
           {
             path: "/product/:id",
@@ -49,7 +59,7 @@ const App = () => {
           },
           {
             path: "/contact",
-            element: <Contact />,
+            element: <Contact adminDetail={adminDetail} />,
           },
           {
             path: "/login",
