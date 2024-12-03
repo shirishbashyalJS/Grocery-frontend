@@ -30,11 +30,10 @@ export const Product = ({ itemLists }) => {
       (prevProduct) => prevProduct,
       (selectedProduct.rate = newRate)
     );
-    // console.log(selectedProduct);
   };
 
   useEffect(() => {
-    const foundProduct = All.find((product) => product.name === params.id);
+    const foundProduct = All.find((product) => product._id === params.id);
     if (foundProduct) {
       setSelectedProduct(foundProduct);
     }

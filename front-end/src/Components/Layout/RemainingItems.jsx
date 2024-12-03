@@ -124,7 +124,7 @@ export const RemainingItems = ({
                 <span className="stars">{item.rate}</span>
               </div>
 
-              <NavLink to={`/product/${item.name}`} className="NavLink">
+              <NavLink to={`/product/${item._id}`} className="NavLink">
                 <button className="explore-button">View</button>
               </NavLink>
             </div>
