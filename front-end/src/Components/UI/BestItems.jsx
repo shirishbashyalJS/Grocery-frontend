@@ -74,7 +74,12 @@ export const BestItems = ({ bestItems }) => {
                     key={index}
                     className="bestitems-link"
                   >
-                    <img src={item.image} className="card-img-top" alt="..." />
+                    <img
+                      src={item.image}
+                      className="card-img-top"
+                      style={{ maxHeight: "35vh" }}
+                      alt="..."
+                    />
                     <div className="card-body best-card-text">
                       <h5 className="card-title">{item.name}</h5>
                     </div>

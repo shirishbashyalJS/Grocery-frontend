@@ -247,6 +247,7 @@
 .card-container .card-image img {
   width: 100%;
   border-radius: 10px;
+  max-height: 30vh;
 }
 
 .card-container .favorite-icon {
@@ -263,7 +264,7 @@
   font-size: 1.5em;
 }
 .card-container .card-rate {
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 .card-container .card-rating {
   margin: 5px 0;
