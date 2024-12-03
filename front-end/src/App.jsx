@@ -13,10 +13,11 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const App = () => {
+  const productsUrl = "http://localhost:2081/newbashyalgeneralstore/products";
   const [itemLists, setItemLists] = useState();
   useEffect(() => {
     axios
-      .get("http://localhost:2081/newbashyalgeneralstore/products")
+      .get(productsUrl)
       .then((result) => {
         setItemLists(
           Object.fromEntries(

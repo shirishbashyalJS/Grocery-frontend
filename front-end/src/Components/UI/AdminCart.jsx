@@ -5,6 +5,8 @@ import axios from "axios";
 export const AdminCart = () => {
   const { cart, setCart } = useCart();
   const [order, setOrder] = useState();
+  const orderItemsUrl =
+    "http://localhost:2081/newbashyalgeneralstore/orderedItems/";
 
   const handleCustomerLocation = (lat, lon) => {
     window.open(`https://maps.google.com/?q= + ${lat}  + ${lon}`);
@@ -14,9 +16,7 @@ export const AdminCart = () => {
     const confirm = prompt("Enter 'confirm' to confirm the complete order.");
     if (confirm === "confirm") {
       try {
-        await axios.delete(
-          `http://localhost:2081/newbashyalgeneralstore/orderedItems/${id}`
-        );
+        await axios.delete(`${orderItemsUrl}${id}`);
         alert("Order deleted successfully!");
         setOrder(order.filter((ord) => ord._id !== id));
       } catch (err) {
@@ -27,12 +27,10 @@ export const AdminCart = () => {
     }
   };
   useEffect(() => {
-    axios
-      .get("http://localhost:2081/newbashyalgeneralstore/orderedItems")
-      .then((responce) => {
-        setOrder(responce.data);
-        console.log(responce.data);
-      });
+    axios.get(orderItemsUrl).then((responce) => {
+      setOrder(responce.data);
+      console.log(responce.data);
+    });
   }, []);
   return (
     <div className="added-cart-items container pb-5 pt-5 ">
