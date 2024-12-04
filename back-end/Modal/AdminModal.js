@@ -6,7 +6,8 @@ const adminModalSchema = new mongoose.Schema({
     username: {type:String},
     password: {type:String}
   },
-  contact: {type:String}
+  contact: {type:String},
+  minOrder: Number
 })
 
 const  adminDetail = mongoose.model("admins",adminModalSchema);

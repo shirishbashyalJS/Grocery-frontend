@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import { useCart, useLogin, useUser } from "../Layout/Layout";
 import axios from "axios";
 
-export const BuyProduct = ({ cart, setCart }) => {
+export const BuyProduct = ({ cart, setCart, adminDetail }) => {
   const { user, setUser } = useUser();
   const [cartTotalAmount, setCartTotalAmount] = useState(0);
+  const [orderTotalAmount, setOrderTotalAmount] = useState(15);
   const [order, setOrder] = useState([]);
   const [orderedAmt, setOrderAmt] = useState(0);
   const [showModal, setShowModal] = useState(false);
@@ -66,6 +67,9 @@ export const BuyProduct = ({ cart, setCart }) => {
       return total + product.ProductAmount;
     }, 0);
     setCartTotalAmount(totalAmount);
+    setOrderTotalAmount(
+      (adminDetail.minOrder > totalAmount ? 15 : 0) + totalAmount
+    );
   }, [cart]); // Recalculate total when cart changes
 
   const showSuccessFunction = () => {
@@ -82,7 +86,7 @@ export const BuyProduct = ({ cart, setCart }) => {
 
   const handleConfirmOrder = async () => {
     setOrder([...cart]);
-    setOrderAmt(cartTotalAmount);
+    setOrderAmt(orderTotalAmount);
 
     setShowModal(false);
   };
@@ -119,8 +123,16 @@ export const BuyProduct = ({ cart, setCart }) => {
             ))}
 
             <li className="fs-4 list-group-item d-flex justify-content-between">
-              <span>Total (NPR)</span>
+              <span>Total Product Amount (NPR)</span>
               <strong>Rs {cartTotalAmount}</strong>
+            </li>
+            <li className="fs-4 list-group-item d-flex justify-content-between">
+              <span>Delivery Charge (NPR)</span>
+              <strong>Rs {orderTotalAmount - cartTotalAmount}</strong>
+            </li>
+            <li className="fs-4 list-group-item d-flex justify-content-between">
+              <span>Total Amount (NPR)</span>
+              <strong>Rs {orderTotalAmount}</strong>
             </li>
           </ul>
           <button

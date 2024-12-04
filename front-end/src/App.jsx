@@ -71,7 +71,7 @@ const App = () => {
           },
           {
             path: "/cart",
-            element: <Cart />,
+            element: <Cart adminDetail={adminDetail} />,
           },
         ],
       },

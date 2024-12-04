@@ -1,7 +1,7 @@
 import { useCart } from "../Layout/Layout";
 import { BuyProduct } from "./BuyProduct";
 
-export const UserCart = () => {
+export const UserCart = ({ adminDetail }) => {
   const { cart, setCart } = useCart();
 
   const handleRemove = (index) => {
@@ -56,7 +56,7 @@ export const UserCart = () => {
       })}
       {/* cart-items-close */}
       <div className="mb-3 p-3">
-        <BuyProduct cart={cart} setCart={setCart} />
+        <BuyProduct cart={cart} setCart={setCart} adminDetail={adminDetail} />
       </div>
     </div>
   );
