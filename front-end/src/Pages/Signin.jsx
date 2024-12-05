@@ -17,6 +17,7 @@ export const Signin = () => {
     setUser({});
 
     localStorage.clear("user");
+    window.open("/", "_self");
   };
 
   const getUserLocation = () => {
@@ -70,9 +71,9 @@ export const Signin = () => {
     if (validateForm()) {
       setLogin(true);
       localStorage.setItem("login", true); // Store login state as true
-      console.log("User data:", user); // Proceed with valid data
+
       document.getElementById("submit").innerHTML = "Successful"; // Change button text on success
-      // window.open("/", "_self");
+      window.open("/", "_self");
     } else {
       // Show modal if there are errors
       const modal = new bootstrap.Modal(

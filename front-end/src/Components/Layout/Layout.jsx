@@ -34,9 +34,10 @@ export const Layout = ({ adminDetail }) => {
   }, [cart]);
   useEffect(() => {
     // console.log(user);
-    setAdmin(
-      user.email == "shirishbashyal2@gmail.com" && user.password == "Shirish.@1"
-    );
+    // setAdmin(
+    //   user.email == adminDetail.admin.email &&
+    //     user.password == adminDetail.admin.password
+    // );
     localStorage.setItem("user", JSON.stringify(user));
   }, [user]);
   return (

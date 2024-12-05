@@ -42,6 +42,8 @@ const App = () => {
       });
   }, []);
   if (itemLists && adminDetail) {
+    // console.log(adminDetail);
+
     const router = createBrowserRouter([
       {
         path: "/",
@@ -71,7 +73,7 @@ const App = () => {
           },
           {
             path: "/cart",
-            element: <Cart adminDetail={adminDetail} />,
+            element: <Cart adminDetail={adminDetail} adminUrl={adminUrl} />,
           },
         ],
       },

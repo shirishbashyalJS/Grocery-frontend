@@ -18,6 +18,7 @@ export const Login = () => {
     localStorage.setItem("login", false); // Store login state as false
     setUser({});
     localStorage.clear("user");
+    window.open("/", "_self");
   };
 
   const getUserLocation = () => {
@@ -69,13 +70,11 @@ export const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (validateForm()) {
       setLogin(true);
       localStorage.setItem("login", true); // Store login state as true
-      console.log("User data:", user); // Proceed with valid data
 
-      // window.open("/", "_self");
+      window.open("/", "_self");
     } else {
       // Show modal if there are errors
       const modal = new bootstrap.Modal(
@@ -83,6 +82,7 @@ export const Login = () => {
       );
       modal.show();
     }
+    // window.open("/");
   };
 
   return (

@@ -82,6 +82,17 @@ server.get("/newbashyalgeneralstore/admindetail", async(req,res)=>{
   const data = await adminDetail.find();
   res.json(data);
 })
+server.put("/newbashyalgeneralstore/admindetail/:id", async(req,res)=>{
+  const { id } = req.params;
+  const updateData = req.body;
+  const updatedData = await adminDetail.findByIdAndUpdate(id,updateData);
+  if (!updatedData) {
+    return res.status(404).json({ message: 'Resource not found' });
+  }
+
+  res.status(200).json( { message: 'Resource updated successfully' });
+
+})
 
 
 // Server Listen

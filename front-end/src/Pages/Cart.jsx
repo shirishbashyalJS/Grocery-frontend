@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { BuyProduct } from "../Components/UI/BuyProduct";
 import { UserCart } from "../Components/UI/UserCart";
 import { AdminCart } from "../Components/UI/AdminCart";
-export const Cart = ({ adminDetail }) => {
+export const Cart = ({ adminDetail, adminUrl }) => {
   const { admin, setAdmin } = useAdmin();
   return (
     <section className="cartPage">
@@ -16,7 +16,7 @@ export const Cart = ({ adminDetail }) => {
       {/* cart Items */}
 
       {admin ? (
-        <AdminCart adminDetail={adminDetail} />
+        <AdminCart adminDetail={adminDetail} adminUrl={adminUrl} />
       ) : (
         <UserCart adminDetail={adminDetail} />
       )}
