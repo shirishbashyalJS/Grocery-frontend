@@ -12,7 +12,10 @@ export const RemainingItems = ({
   const scrollIntoViewRef = useRef(null); // Use a ref for scrolling
   const { admin, setAdmin } = useAdmin();
   const [addItems, setAddItems] = useState(false);
-  const [newProduct, setNewProduct] = useState({});
+  const [newProduct, setNewProduct] = useState({
+    available: true,
+    bestItem: false,
+  });
 
   const handleNewProductDetails = (e) => {
     setNewProduct({ ...newProduct, [e.target.name]: e.target.value });
@@ -52,18 +55,18 @@ export const RemainingItems = ({
 
   return (
     <>
-      {selectedItemList != 0 && admin && (
+      {selectedItemList != "ALL" && admin && (
         <div className="add-item-btn d-flex justify-content-center my-5">
           <button
             type="button"
             className="btn btn-lg ms-5 btn-outline-dark"
-            onClick={() => setAddItems(true)}
+            onClick={() => setAddItems((prev) => (prev ? false : true))}
           >
             Add Items
           </button>
         </div>
       )}
-      {selectedItemList != 0 && addItems && (
+      {selectedItemList != "ALL" && addItems && (
         <div className="add-items d-flex justify-content-center">
           <form action="" className="d-flex flex-column fs-4 ">
             <input
@@ -87,6 +90,14 @@ export const RemainingItems = ({
               className="mb-3 p-2"
               onChange={handleNewProductDetails}
             />
+            <input
+              name="unit"
+              type="text"
+              placeholder="Item Unit"
+              className="mb-3 p-2"
+              onChange={handleNewProductDetails}
+            />
+
             <button
               type="submit"
               className="mb-3 p-2 btn btn-lg  btn-outline-dark"
@@ -105,7 +116,7 @@ export const RemainingItems = ({
         {remainingItems.length > 0 ? (
           remainingItems.map((item, index) => (
             <div className="card" key={index}>
-              {selectedItemList === 0 && admin && (
+              {selectedItemList == "ALL" && admin && (
                 <button className="btn btn-outline-dark w-25 ms-auto">
                   <MdDelete
                     className="fs-2 text-danger"
@@ -124,7 +135,7 @@ export const RemainingItems = ({
                 <span className="stars">Rs {item.rate}</span>
               </div>
 
-              <NavLink to={`/product/${item._id}`} className="NavLink">
+              <NavLink to={`/product/${item.name}`} className="NavLink">
                 <button className="explore-button">View</button>
               </NavLink>
             </div>

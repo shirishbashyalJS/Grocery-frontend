@@ -42,7 +42,7 @@ const App = () => {
       });
   }, []);
   if (itemLists && adminDetail) {
-    // console.log(adminDetail);
+    // console.log(itemLists);
 
     const router = createBrowserRouter([
       {
