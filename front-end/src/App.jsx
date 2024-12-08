@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import { FaCartPlus } from "react-icons/fa";
+// import abc from "../src/API/Items.json";
 import { Home } from "./Pages/Home";
 import { Contact } from "./Pages/Contact";
 import { Login } from "./Pages/Login";
@@ -40,6 +41,15 @@ const App = () => {
       .catch((err) => {
         console.log(err);
       });
+
+    // axios
+    //   .post(productsUrl, abc)
+    //   .then((result) => {
+    //     setAdminDetail(result.data[0]);
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
   }, []);
   if (itemLists && adminDetail) {
     // console.log(itemLists);
@@ -53,11 +63,19 @@ const App = () => {
         children: [
           {
             path: "/",
-            element: <Home itemLists={itemLists} adminDetail={adminDetail} />,
+            element: (
+              <Home
+                itemLists={itemLists}
+                adminDetail={adminDetail}
+                productsUrl={productsUrl}
+              />
+            ),
           },
           {
             path: "/product/:id",
-            element: <Product itemLists={itemLists} />,
+            element: (
+              <Product itemLists={itemLists} productsUrl={productsUrl} />
+            ),
           },
           {
             path: "/contact",

@@ -70,7 +70,7 @@ export const BestItems = ({ bestItems }) => {
                   key={index}
                 >
                   <NavLink
-                    to={`/product/${item.name}`}
+                    to={`/product/${item._id}`}
                     key={index}
                     className="bestitems-link"
                   >

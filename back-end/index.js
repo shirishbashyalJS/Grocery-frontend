@@ -20,13 +20,58 @@ mongoose.connect('mongodb://localhost:27017/Grocery').then((e) =>
 
 server.get('/newbashyalgeneralstore/products',async (req,res)=>{
   const productsInfo = await products.find();
+  
   res.json(productsInfo)
 })
-// server.get('/newbashyalgeneralstore/products/:name',async (req,res)=>{
-//   const name = req.params;
-//   const productInfo = await products.find();
-//   res.json(productsInfo)
-// })
+server.put('/newbashyalgeneralstore/products/:id',async (req,res)=>{ 
+  const { id } = req.params;
+  const productDocument = await products.findOne({
+    $or: [
+      { "VEGETABLES._id": id },
+      { "BAKING/SUGAR._id": id },
+      { "FLOUR/SPICES._id": id },
+      { "GRAINS/LENTILS._id": id },
+      { "OILS/SAUCE._id": id },
+      { "CARE/CLEANING._id": id },
+      { "DRINK/CHIPS._id": id },
+      { "DRYFRUITS/BISCUIT._id": id },
+    ],
+  });
+
+  if (!productDocument) {
+    return console.log("Product not found");
+  }
+
+  // Find the specific array and index where the product is located
+  let updated = false;
+  const keys = Object.keys(productDocument.toObject());
+  for (const key of keys) {
+    if (Array.isArray(productDocument[key])) {
+      const index = productDocument[key].findIndex(
+        (item) => item._id.toString() === id
+      );
+      if (index !== -1) {
+        // Update the object with req.body
+        productDocument[key][index] = {
+          ...productDocument[key][index].toObject(),
+          ...req.body,
+        };
+        updated = true;
+        break;
+      }
+    }
+  }
+
+  if (updated) {
+    await productDocument.save();
+    console.log("Product updated successfully");
+  } else {
+    console.log("Product not found in any field");
+  }
+
+
+})
+
 
 
 // OrderedItems
@@ -47,7 +92,7 @@ server.post("/newbashyalgeneralstore/orderedItems",async (req,res)=> {
   catch(err){
     console.error("error in saving data", err);
     res.status(500).send({error:"failed to save the order"});
-  } 
+  }  
 })
 
 server.get('/newbashyalgeneralstore/orderedItems', async (req,res)=>{

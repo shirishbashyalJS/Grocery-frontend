@@ -3,14 +3,15 @@ import { NavLink, useParams } from "react-router-dom";
 import { useAdmin, useCart, useLogin } from "../Layout/Layout";
 import { FaEdit } from "react-icons/fa";
 import { FaSave } from "react-icons/fa";
+import axios from "axios";
 
-export const Product = ({ itemLists }) => {
+export const Product = ({ itemLists, productsUrl }) => {
   const { admin, setAdmin } = useAdmin();
   const { login, setLogin } = useLogin();
   const All = Object.values(itemLists).flat();
   const params = useParams();
   const [selectedProduct, setSelectedProduct] = useState(() => {
-    const foundProduct = All.find((product) => product.name == params.id);
+    const foundProduct = All.find((product) => product._id == params.id);
     if (foundProduct) {
       return foundProduct;
     } else return {};
@@ -20,8 +21,8 @@ export const Product = ({ itemLists }) => {
   const [showModal, setShowModal] = useState(false); // State to control modal visibility
   const [editMode, setEditMode] = useState(false);
   const storedLogin = localStorage.getItem("login");
-  const [newRate, setNewRate] = useState();
-  const [updateProduct, setUpdateProduct] = useState({});
+
+  const [updateProduct, setUpdateProduct] = useState();
 
   const handleProductEdit = () => {
     setUpdateProduct(selectedProduct);
@@ -34,21 +35,31 @@ export const Product = ({ itemLists }) => {
       [name]: type === "checkbox" ? checked : value,
     }));
   };
-  const handleSaveRate = () => {
-    console.log(updateProduct);
+
+  const handleChangesSave = () => {
+    const demo = prompt("Enter 'ok' to make the changes");
+    if (updateProduct && demo == "ok") {
+      axios
+        .put(productsUrl + "/" + selectedProduct._id, updateProduct)
+        .then((res) => {
+          console.log(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } else {
+      alert("Please make some changes to update data");
+    }
   };
 
   useEffect(() => {
-    // All.find((product) => console.log(product.name, product._id, params.id));
-    // console.log(All.find((product) => (product._id, params.id)));
-
     if (storedLogin === "true") {
       setLogin(true);
     }
     if (storedLogin === "false") {
       setLogin(false);
     }
-  }, [All, params.id, storedLogin]);
+  }, [storedLogin, selectedProduct]);
 
   const handleQuantityChange = (e) => {
     setQuantity(e.target.value);
@@ -100,7 +111,7 @@ export const Product = ({ itemLists }) => {
             <div className="edit-product fs-2 d-flex justify-content-around ">
               <button
                 className="btn btn-outline-dark ms-5"
-                onClick={handleSaveRate}
+                onClick={handleChangesSave}
               >
                 <FaSave />
               </button>
