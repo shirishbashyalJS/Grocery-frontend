@@ -5,7 +5,7 @@ import { useOutletContext } from "react-router-dom";
 import { useLogin } from "../Components/Layout/Layout";
 import { Notice } from "../Components/UI/Notice";
 
-export const Home = ({ itemLists, adminDetail }) => {
+export const Home = ({ itemLists, adminDetail, productsUrl }) => {
   const { searchValue } = useOutletContext();
 
   return (
@@ -14,7 +14,11 @@ export const Home = ({ itemLists, adminDetail }) => {
 
       <Notice adminDetail={adminDetail} />
       <Carousel />
-      <Items itemLists={itemLists} searchValue={searchValue} />
+      <Items
+        itemLists={itemLists}
+        searchValue={searchValue}
+        productsUrl={productsUrl}
+      />
     </section>
   );
 };

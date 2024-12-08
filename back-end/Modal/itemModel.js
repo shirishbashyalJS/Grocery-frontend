@@ -5,10 +5,10 @@
 const mongoose = require("mongoose");
 
 const indiProductSchema = new mongoose.Schema({
-  name: String,
-  image: String,
-  rate: Number,
-  unit: String,
+  name: {type: String,required: true},
+  image: {type:String,required: true},
+  rate: {type:Number,required: true},
+  unit: {type: String,required: true},
   available: {
     type:Boolean,
   default: true},

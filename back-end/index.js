@@ -18,20 +18,29 @@ mongoose.connect('mongodb://localhost:27017/Grocery').then((e) =>
  
 //Products
 
-
+//Get the responce as products data
 server.get('/nbgs/products',async (req,res)=>{
   const productsInfo = await products.find();
-  
-
-
   res.json(productsInfo)
 })
+
+//update products name,rate,...
 server.put('/nbgs/products/:id',async (req,res)=>{ 
   const { id } = req.params;
   const updateData = await products.findByIdAndUpdate(id,req.body);
   res.status(201).send(updateData);
-  
+})
 
+//Add more products
+server.post("/nbgs/products", async(req,res)=>{
+  try{
+  const data = req.body;
+  const update = new products(data);
+  const updated = await update.save();
+  if(updated)
+  res.status(201).send("Added")
+  }
+  catch(err){res.status(500).send(err );}
 })
 
 

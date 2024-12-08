@@ -7,7 +7,7 @@ import { useWindowScroll } from "@uidotdev/usehooks";
 import { BiSolidArrowToTop } from "react-icons/bi";
 import itemTypes from "../../API/productTypes.json";
 
-export const Items = ({ itemLists, searchValue }) => {
+export const Items = ({ itemLists, searchValue, productsUrl }) => {
   const [selectedItemList, setSelectedItemList] = useState("ALL");
   const keys = itemTypes;
   const [bestItems, setBestItems] = useState();
@@ -32,6 +32,7 @@ export const Items = ({ itemLists, searchValue }) => {
         itemLists={itemLists}
         selectedItemList={selectedItemList}
         searchValue={searchValue}
+        productsUrl={productsUrl}
       />
       <aside style={{ position: "fixed", bottom: 10, right: 10 }}>
         <button

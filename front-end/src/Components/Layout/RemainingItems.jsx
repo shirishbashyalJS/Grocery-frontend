@@ -2,11 +2,13 @@ import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useAdmin } from "./Layout";
 import { MdDelete } from "react-icons/md";
+import axios from "axios";
 
 export const RemainingItems = ({
   itemLists,
   selectedItemList,
   searchValue,
+  productsUrl,
 }) => {
   const [remainingItems, setRemainingItems] = useState([]);
   const scrollIntoViewRef = useRef(null); // Use a ref for scrolling
@@ -15,15 +17,31 @@ export const RemainingItems = ({
   const [newProduct, setNewProduct] = useState({
     available: true,
     bestItem: false,
+    type: selectedItemList,
   });
 
+  useEffect(() => {
+    setNewProduct({ ...newProduct, type: selectedItemList });
+  }, [selectedItemList]);
   const handleNewProductDetails = (e) => {
     setNewProduct({ ...newProduct, [e.target.name]: e.target.value });
   };
   const handleNewProductSubmit = (e) => {
     e.preventDefault();
     setAddItems(false);
-    console.log(newProduct, selectedItemList);
+    axios
+      .post(productsUrl, newProduct)
+      .then((res) => {
+        alert(res.data);
+      })
+      .catch((err) => {
+        alert("Failed");
+      });
+    setNewProduct({
+      available: true,
+      bestItem: false,
+      type: selectedItemList,
+    });
   };
   const handleDeleteItem = (item) => {
     const confirm = prompt("Enter product name to delete product");
@@ -73,8 +91,8 @@ export const RemainingItems = ({
         <div className="add-items d-flex justify-content-center">
           <form action="" className="d-flex flex-column fs-4 ">
             <input
-              type="url"
-              name="url"
+              type="text"
+              name="image"
               placeholder="Item Picture URL"
               className="mb-3 p-2"
               onChange={handleNewProductDetails}
