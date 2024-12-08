@@ -42,10 +42,10 @@ export const Product = ({ itemLists, productsUrl }) => {
       axios
         .put(productsUrl + "/" + selectedProduct._id, updateProduct)
         .then((res) => {
-          console.log(res.data);
+          alert("Successful");
         })
         .catch((err) => {
-          console.log(err);
+          alert("Failed");
         });
     } else {
       alert("Please make some changes to update data");

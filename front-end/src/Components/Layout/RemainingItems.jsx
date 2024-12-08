@@ -32,12 +32,15 @@ export const RemainingItems = ({
     if (confirm.toLowerCase() == item.name.toLowerCase()) console.log(item);
   };
   useEffect(() => {
-    const All = Object.values(itemLists).flat();
+    const All = itemLists;
 
     const displayItems = () => {
       let itemsToDisplay =
-        selectedItemList === "ALL" ? All : itemLists[selectedItemList] || [];
-
+        selectedItemList == "ALL"
+          ? All
+          : itemLists.filter((item) => {
+              return item.type == selectedItemList;
+            }) || [];
       // Filter items based on searchValue
 
       if (searchValue) {

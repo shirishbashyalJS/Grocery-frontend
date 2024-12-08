@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import { FaCartPlus } from "react-icons/fa";
-// import abc from "../src/API/Items.json";
+import abc from "../src/API/Items.json";
 import { Home } from "./Pages/Home";
 import { Contact } from "./Pages/Contact";
 import { Login } from "./Pages/Login";
@@ -14,21 +14,16 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const App = () => {
-  const productsUrl = "http://localhost:2081/newbashyalgeneralstore/products";
-  const adminUrl = "http://localhost:2081/newbashyalgeneralstore/admindetail";
+  const GeneralUrl = "http://localhost:2081/nbgs/";
+  const productsUrl = `${GeneralUrl}products`;
+  const adminUrl = `${GeneralUrl}admindetail`;
   const [itemLists, setItemLists] = useState();
   const [adminDetail, setAdminDetail] = useState();
   useEffect(() => {
     axios
       .get(productsUrl)
       .then((result) => {
-        setItemLists(
-          Object.fromEntries(
-            Object.entries(result.data[0]).filter(([key]) => {
-              return key != "_id";
-            })
-          )
-        );
+        setItemLists(result.data);
       })
       .catch((err) => {
         console.log(err);

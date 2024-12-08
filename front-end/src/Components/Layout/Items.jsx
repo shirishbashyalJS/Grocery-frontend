@@ -1,28 +1,22 @@
 import { BestItems } from "../UI/BestItems";
-// import itemLists from "../../API/Items.json";
 
 import { useEffect, useRef, useState } from "react";
 import { RadioList } from "../UI/RadioList";
 import { RemainingItems } from "./RemainingItems";
 import { useWindowScroll } from "@uidotdev/usehooks";
 import { BiSolidArrowToTop } from "react-icons/bi";
+import itemTypes from "../../API/productTypes.json";
 
 export const Items = ({ itemLists, searchValue }) => {
   const [selectedItemList, setSelectedItemList] = useState("ALL");
-  const keys = ["ALL", Object.keys(itemLists)].flat();
+  const keys = itemTypes;
   const [bestItems, setBestItems] = useState();
 
   function handleDataFromChild(data) {
     setSelectedItemList(data);
   }
   useEffect(() => {
-    setBestItems(
-      Object.values(itemLists)
-        .flat()
-        .filter((item) => {
-          return item.bestItem === true;
-        })
-    );
+    setBestItems(itemLists.filter((item) => item.bestItem));
   }, []);
 
   const [{ x, y }, scrollTo] = useWindowScroll();

@@ -18,57 +18,19 @@ mongoose.connect('mongodb://localhost:27017/Grocery').then((e) =>
  
 //Products
 
-server.get('/newbashyalgeneralstore/products',async (req,res)=>{
+
+server.get('/nbgs/products',async (req,res)=>{
   const productsInfo = await products.find();
   
+
+
   res.json(productsInfo)
 })
-server.put('/newbashyalgeneralstore/products/:id',async (req,res)=>{ 
+server.put('/nbgs/products/:id',async (req,res)=>{ 
   const { id } = req.params;
-  const productDocument = await products.findOne({
-    $or: [
-      { "VEGETABLES._id": id },
-      { "BAKING/SUGAR._id": id },
-      { "FLOUR/SPICES._id": id },
-      { "GRAINS/LENTILS._id": id },
-      { "OILS/SAUCE._id": id },
-      { "CARE/CLEANING._id": id },
-      { "DRINK/CHIPS._id": id },
-      { "DRYFRUITS/BISCUIT._id": id },
-    ],
-  });
-
-  if (!productDocument) {
-    return console.log("Product not found");
-  }
-
-  // Find the specific array and index where the product is located
-  let updated = false;
-  const keys = Object.keys(productDocument.toObject());
-  for (const key of keys) {
-    if (Array.isArray(productDocument[key])) {
-      const index = productDocument[key].findIndex(
-        (item) => item._id.toString() === id
-      );
-      if (index !== -1) {
-        // Update the object with req.body
-        productDocument[key][index] = {
-          ...productDocument[key][index].toObject(),
-          ...req.body,
-        };
-        updated = true;
-        break;
-      }
-    }
-  }
-
-  if (updated) {
-    await productDocument.save();
-    console.log("Product updated successfully");
-  } else {
-    console.log("Product not found in any field");
-  }
-
+  const updateData = await products.findByIdAndUpdate(id,req.body);
+  res.status(201).send(updateData);
+  
 
 })
 
@@ -76,7 +38,7 @@ server.put('/newbashyalgeneralstore/products/:id',async (req,res)=>{
 
 // OrderedItems
 
-server.post("/newbashyalgeneralstore/orderedItems",async (req,res)=> {
+server.post("/nbgs/orderedItems",async (req,res)=> {
   try{
     let userOrder = new orderDetail({
       items: req.body.items,
@@ -95,12 +57,12 @@ server.post("/newbashyalgeneralstore/orderedItems",async (req,res)=> {
   }  
 })
 
-server.get('/newbashyalgeneralstore/orderedItems', async (req,res)=>{
+server.get('/nbgs/orderedItems', async (req,res)=>{
   const order = await orderDetail.find();
   
   res.json(order);
 })
-server.delete("/newbashyalgeneralstore/orderedItems/:id",async(req,res)=>{
+server.delete("/nbgs/orderedItems/:id",async(req,res)=>{
   try {
     const { id } = req.params;
 
@@ -123,11 +85,11 @@ server.delete("/newbashyalgeneralstore/orderedItems/:id",async(req,res)=>{
 
 //admin username and password and notice and contact
 
-server.get("/newbashyalgeneralstore/admindetail", async(req,res)=>{
+server.get("/nbgs/admindetail", async(req,res)=>{
   const data = await adminDetail.find();
   res.json(data);
 })
-server.put("/newbashyalgeneralstore/admindetail/:id", async(req,res)=>{
+server.put("/nbgs/admindetail/:id", async(req,res)=>{
   const { id } = req.params;
   const updateData = req.body;
   const updatedData = await adminDetail.findByIdAndUpdate(id,updateData);

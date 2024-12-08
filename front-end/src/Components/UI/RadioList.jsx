@@ -18,25 +18,24 @@ export const RadioList = ({ sendDataToParent, keys }) => {
     >
       {keys.map((type, index) => {
         const id = index; // Ensure unique ID for each button
-        if (type != "BESTIIEMS") {
-          return (
-            <div key={index} className="radio-input">
-              <input
-                type="radio"
-                className="btn-check"
-                id={id}
-                autoComplete="off"
-                name="btnradio"
-                value={type} // Set value to the type's name
-                onChange={() => handleSelect(type)} // Call the handleSelect function
-                checked={selectedItem === type} // Check if this is the selected item
-              />
-              <label className="btn btn-outline-dark label-btn" htmlFor={id}>
-                {type}
-              </label>
-            </div>
-          );
-        }
+
+        return (
+          <div key={index} className="radio-input">
+            <input
+              type="radio"
+              className="btn-check"
+              id={id}
+              autoComplete="off"
+              name="btnradio"
+              value={type} // Set value to the type's name
+              onChange={() => handleSelect(type)} // Call the handleSelect function
+              checked={selectedItem === type} // Check if this is the selected item
+            />
+            <label className="btn btn-outline-dark label-btn" htmlFor={id}>
+              {type}
+            </label>
+          </div>
+        );
       })}
     </div>
   );
