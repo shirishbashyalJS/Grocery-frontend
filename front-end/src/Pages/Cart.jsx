@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { BuyProduct } from "../Components/UI/BuyProduct";
 import { UserCart } from "../Components/UI/UserCart";
 import { AdminCart } from "../Components/UI/AdminCart";
-export const Cart = ({ adminDetail, adminUrl }) => {
+export const Cart = ({ adminDetail, adminUrl, GeneralUrl }) => {
   const { admin, setAdmin } = useAdmin();
   return (
     <section className="cartPage">
@@ -16,9 +16,13 @@ export const Cart = ({ adminDetail, adminUrl }) => {
       {/* cart Items */}
 
       {admin ? (
-        <AdminCart adminDetail={adminDetail} adminUrl={adminUrl} />
+        <AdminCart
+          adminDetail={adminDetail}
+          adminUrl={adminUrl}
+          GeneralUrl={GeneralUrl}
+        />
       ) : (
-        <UserCart adminDetail={adminDetail} />
+        <UserCart minOrder={adminDetail.minOrder} GeneralUrl={GeneralUrl} />
       )}
     </section>
   );

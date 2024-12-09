@@ -2,14 +2,13 @@ import { useEffect, useRef, useState } from "react";
 import { useCart } from "../Layout/Layout";
 import axios from "axios";
 
-export const AdminCart = ({ adminDetail, adminUrl }) => {
+export const AdminCart = ({ adminDetail, adminUrl, GeneralUrl }) => {
   const { cart, setCart } = useCart();
   const [order, setOrder] = useState();
   const [changeAdminDetail, setChangeAdminDetail] = useState(adminDetail);
   const [settingVisible, setSettingVisible] = useState(false);
   const [adminVisible, setAdminVisible] = useState(false);
-  const orderItemsUrl =
-    "http://localhost:2081/newbashyalgeneralstore/orderedItems/";
+  const orderItemsUrl = `${GeneralUrl}orderedItems/`;
 
   const handleCustomerLocation = (lat, lon) => {
     window.open(`https://maps.google.com/?q= + ${lat}  + ${lon}`);
@@ -21,6 +20,7 @@ export const AdminCart = ({ adminDetail, adminUrl }) => {
       try {
         await axios.delete(`${orderItemsUrl}${id}`);
         alert("Order deleted successfully!");
+
         setOrder(order.filter((ord) => ord._id !== id));
       } catch (err) {
         console.log(err);

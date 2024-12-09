@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useCart, useLogin, useUser } from "../Layout/Layout";
 import axios from "axios";
 
-export const BuyProduct = ({ cart, setCart, adminDetail }) => {
+export const BuyProduct = ({ cart, setCart, minOrder, GeneralUrl }) => {
   const { user, setUser } = useUser();
   const [cartTotalAmount, setCartTotalAmount] = useState(0);
   const [orderTotalAmount, setOrderTotalAmount] = useState(15);
@@ -15,7 +15,16 @@ export const BuyProduct = ({ cart, setCart, adminDetail }) => {
   const [latitudeDeliver, setLatitudeDeliver] = useState();
   const [longitudeDeliver, setLongitudeDeliver] = useState();
   const [deliverLocation, setDeliverLocation] = useState({});
+  const [orderedItems, setOrderedItems] = useState(() => {
+    const existingOrder = JSON.parse(localStorage.getItem("orderedItems"));
+    console.log(existingOrder);
+    return existingOrder ? existingOrder : [];
+  });
 
+  useEffect(() => {
+    localStorage.setItem("orderedItems", JSON.stringify(orderedItems));
+    console.log(orderedItems);
+  }, [orderedItems]);
   useEffect(() => {
     const deliverDetails = {
       items: order,
@@ -25,13 +34,11 @@ export const BuyProduct = ({ cart, setCart, adminDetail }) => {
     };
     if (order.length > 0) {
       axios
-        .post(
-          "http://127.0.0.1:2081/newbashyalgeneralstore/orderedItems",
-          deliverDetails
-        )
+        .post(`${GeneralUrl}orderedItems`, deliverDetails)
         .then((result) => {
           showSuccessFunction();
           // console.log(result);
+          setOrderedItems([...orderedItems, ...cart]);
           setCart([]);
         })
         .catch((err) => {
@@ -67,9 +74,7 @@ export const BuyProduct = ({ cart, setCart, adminDetail }) => {
       return total + product.ProductAmount;
     }, 0);
     setCartTotalAmount(totalAmount);
-    setOrderTotalAmount(
-      (adminDetail.minOrder > totalAmount ? 15 : 0) + totalAmount
-    );
+    setOrderTotalAmount((minOrder > totalAmount ? 15 : 0) + totalAmount);
   }, [cart]); // Recalculate total when cart changes
 
   const showSuccessFunction = () => {
@@ -201,32 +206,52 @@ export const BuyProduct = ({ cart, setCart, adminDetail }) => {
           <h4 className="d-flex justify-content-between align-items-center mb-3">
             <span className="text-body-dark fs-1">Ordered Items</span>
             <span className="badge bg-secondary rounded-pill">
-              {order.length}
+              {orderedItems && orderedItems.length}
             </span>
           </h4>
           <ul className="list-group mb-3">
-            {order.map((product, index) => (
-              <li
-                className="fs-4 list-group-item d-flex justify-content-between  lh-sm"
-                key={index}
-              >
-                <div>
-                  <p className="my-0">{product.name}</p>
-                  <small className="text-body-secondary">
-                    Quantity: {product.quantity}
-                  </small>
-                </div>
-                <span className="text-body-secondary">
-                  Rs {product.ProductAmount}
-                </span>
-              </li>
-            ))}
+            {orderedItems &&
+              orderedItems.map((product, index) => (
+                <li
+                  className="fs-4 list-group-item d-flex justify-content-between  lh-sm"
+                  key={index}
+                >
+                  <div>
+                    <p className="my-0">{product.name}</p>
+                    <small className="text-body-secondary">
+                      Quantity: {product.quantity}
+                    </small>
+                  </div>
+                  <span className="text-body-secondary">
+                    Rs {product.ProductAmount}
+                  </span>
+                </li>
+              ))}
 
             <li className="fs-4 list-group-item d-flex justify-content-between">
               <span>Total (NPR)</span>
-              <strong>Rs {orderedAmt}</strong>
+              <strong>
+                Rs{" "}
+                {orderedItems.reduce((total, num) => {
+                  return total + num.ProductAmount;
+                }, 0)}
+              </strong>
             </li>
           </ul>
+          <div className="note">
+            <p className="fs-3">
+              Note! Once Item is delivered, you can deleted the ordered item
+              list
+            </p>
+            <button
+              className="btn btn-outline-dark fs-5"
+              onClick={() => {
+                setOrderedItems([]);
+              }}
+            >
+              Clear Order List
+            </button>
+          </div>
         </div>
       </div>
     </>

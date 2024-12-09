@@ -86,7 +86,13 @@ const App = () => {
           },
           {
             path: "/cart",
-            element: <Cart adminDetail={adminDetail} adminUrl={adminUrl} />,
+            element: (
+              <Cart
+                adminDetail={adminDetail}
+                GeneralUrl={GeneralUrl}
+                adminUrl={adminUrl}
+              />
+            ),
           },
         ],
       },

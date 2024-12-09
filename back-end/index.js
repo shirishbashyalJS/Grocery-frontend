@@ -42,6 +42,26 @@ server.post("/nbgs/products", async(req,res)=>{
   }
   catch(err){res.status(500).send(err );}
 })
+//Delete Products
+server.delete("/nbgs/products/:id",async(req,res)=>{
+  try {
+    const { id } = req.params;
+
+    // Find and delete the order by its ID
+    const deletedOrder = await products.findByIdAndDelete(id);
+
+    if (!deletedOrder) {
+      return res.status(404).send({ error: "Order not found" })
+    }
+
+    res.status(200).send({ message: "Order deleted successfully", deletedOrder });
+  } catch (err) {
+    console.error("Error deleting order:", err);
+    res.status(500).send({ error: "Failed to delete the order" });
+  }
+  
+})
+
 
 
 

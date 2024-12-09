@@ -197,18 +197,22 @@ export const Product = ({ itemLists, productsUrl }) => {
                   Total Amount: Rs {selectedProduct.rate * quantity}
                 </p>
               </div>
-              <button
-                className="explore-button fs-4"
-                onClick={() => {
-                  handleAddToCart(
-                    selectedProduct,
-                    selectedProduct.rate * quantity,
-                    quantity
-                  );
-                }}
-              >
-                Add To Cart
-              </button>
+              {selectedProduct.available ? (
+                <button
+                  className="explore-button fs-4"
+                  onClick={() => {
+                    handleAddToCart(
+                      selectedProduct,
+                      selectedProduct.rate * quantity,
+                      quantity
+                    );
+                  }}
+                >
+                  Add To Cart
+                </button>
+              ) : (
+                <p className="fs-3">Sorry! Item is not available</p>
+              )}
             </>
           )}
         </div>

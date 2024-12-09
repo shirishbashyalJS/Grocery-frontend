@@ -45,9 +45,23 @@ export const RemainingItems = ({
   };
   const handleDeleteItem = (item) => {
     const confirm = prompt("Enter product name to delete product");
-    // console.log(confirm);
 
-    if (confirm.toLowerCase() == item.name.toLowerCase()) console.log(item);
+    if (confirm)
+      if (confirm.toLowerCase() == item.name.toLowerCase()) {
+        axios
+          .delete(productsUrl + "/" + item._id)
+          .then((res) => {
+            alert(JSON.stringify(res.data));
+            setRemainingItems(
+              remainingItems.filter((prod) => {
+                return prod != item;
+              })
+            );
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      } else console.log(confirm);
   };
   useEffect(() => {
     const All = itemLists;
