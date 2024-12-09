@@ -72,11 +72,17 @@ export const Product = ({ itemLists, productsUrl }) => {
         ProductAmount: productAmt,
         quantity: quantity,
       };
-      setCart((prevCart) => [...prevCart, newObj]);
+      if (productAmt > 0) {
+        setCart((prevCart) => [...prevCart, newObj]);
+        setShowModal(true);
+      } else {
+        alert(
+          "You have to enter product quantity which must be greater than 0"
+        );
+      }
     }
 
     // Open modal by setting showModal to true
-    setShowModal(true);
   };
 
   const closeModal = () => {
@@ -180,18 +186,62 @@ export const Product = ({ itemLists, productsUrl }) => {
 
           {!admin && (
             <>
-              <div className="add-manually-div fs-3">
-                <span className="me-2">
-                  Quantity in {selectedProduct.unit}:
-                </span>
-                <input
-                  type="number"
-                  style={{ width: "80px" }}
-                  defaultValue={1}
-                  min="1"
-                  onChange={handleQuantityChange}
-                />
-              </div>
+              {selectedProduct.unit.toLowerCase() === "kg" ? (
+                <div className="add-manually-div fs-3">
+                  <span className="me-2">
+                    Quantity in {selectedProduct.unit}:
+                  </span>
+                  <input
+                    min={1}
+                    type="number"
+                    style={{ width: "80px" }}
+                    defaultValue={1}
+                    onChange={handleQuantityChange}
+                  />
+                </div>
+              ) : (
+                <div>
+                  <button
+                    onClick={() => {
+                      setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
+                    }}
+                    className="fs-2"
+                    style={{
+                      fontWeight: 500,
+                      border: "none",
+                      backgroundColor: "#D3D3D3",
+                      borderRadius: "5px",
+                    }}
+                  >
+                    –
+                  </button>
+                  <input
+                    type="text"
+                    readOnly
+                    value={quantity}
+                    className="fs-3"
+                    style={{
+                      border: "none",
+                      maxWidth: "30px",
+                      textAlign: "center",
+                    }}
+                  />
+                  <button
+                    onClick={() => {
+                      setQuantity((prev) => prev + 1);
+                    }}
+                    className="fs-2"
+                    style={{
+                      fontWeight: 500,
+                      border: "none",
+                      backgroundColor: "#D3D3D3",
+                      borderRadius: "5px",
+                    }}
+                  >
+                    +
+                  </button>
+                </div>
+              )}
               <div className="total-price-container fs-3">
                 <p className="total-price">
                   Total Amount: Rs {selectedProduct.rate * quantity}

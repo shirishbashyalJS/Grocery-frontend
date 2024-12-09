@@ -17,13 +17,11 @@ export const BuyProduct = ({ cart, setCart, minOrder, GeneralUrl }) => {
   const [deliverLocation, setDeliverLocation] = useState({});
   const [orderedItems, setOrderedItems] = useState(() => {
     const existingOrder = JSON.parse(localStorage.getItem("orderedItems"));
-    console.log(existingOrder);
     return existingOrder ? existingOrder : [];
   });
 
   useEffect(() => {
     localStorage.setItem("orderedItems", JSON.stringify(orderedItems));
-    console.log(orderedItems);
   }, [orderedItems]);
   useEffect(() => {
     const deliverDetails = {
@@ -37,7 +35,6 @@ export const BuyProduct = ({ cart, setCart, minOrder, GeneralUrl }) => {
         .post(`${GeneralUrl}orderedItems`, deliverDetails)
         .then((result) => {
           showSuccessFunction();
-          // console.log(result);
           setOrderedItems([...orderedItems, ...cart]);
           setCart([]);
         })
