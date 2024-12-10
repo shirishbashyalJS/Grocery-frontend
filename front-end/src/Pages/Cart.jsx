@@ -1,7 +1,5 @@
 import { NavLink } from "react-router-dom";
 import { useAdmin, useCart } from "../Components/Layout/Layout";
-import { useEffect, useState } from "react";
-import { BuyProduct } from "../Components/UI/BuyProduct";
 import { UserCart } from "../Components/UI/UserCart";
 import { AdminCart } from "../Components/UI/AdminCart";
 export const Cart = ({ adminDetail, adminUrl, GeneralUrl }) => {

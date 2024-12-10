@@ -1,7 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
-import { FaCartPlus } from "react-icons/fa";
-import abc from "../src/API/Items.json";
 import { Home } from "./Pages/Home";
 import { Contact } from "./Pages/Contact";
 import { Login } from "./Pages/Login";
@@ -14,7 +12,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const App = () => {
-  const GeneralUrl = "http://localhost:2081/nbgs/";
+  const GeneralUrl = "https://grocery-2q8d.onrender.com/nbgs/";
   const productsUrl = `${GeneralUrl}products`;
   const adminUrl = `${GeneralUrl}admindetail`;
   const [itemLists, setItemLists] = useState();

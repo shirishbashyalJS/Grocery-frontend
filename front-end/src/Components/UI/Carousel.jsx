@@ -1,5 +1,4 @@
 import { FaArrowCircleRight } from "react-icons/fa";
-import { Link } from "react-router-dom";
 export const Carousel = () => {
   return (
     <section className="carousel-body ">

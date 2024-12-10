@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useCart, useLogin, useUser } from "../Layout/Layout";
+import { useUser } from "../Layout/Layout";
 import axios from "axios";
 
 export const BuyProduct = ({ cart, setCart, minOrder, GeneralUrl }) => {

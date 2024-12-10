@@ -3,12 +3,13 @@ const cors = require("cors");
 const server = express()
 const mongoose = require("mongoose")
 const orderDetail = require("./Modal/orderModel");
-const port = 2081;
 const products = require("./Modal/itemModel");
 const adminDetail = require("./Modal/AdminModal");
+require('dotenv').config();
+const port = process.env.PORT;
 
 //CORS
-const allowedOrigins = ['http://localhost:5173'];
+const allowedOrigins = [process.env.AllowedOrigins];
 
 const corsOptions = {
   origin: (origin, callback) => {
@@ -27,7 +28,7 @@ server.use(cors(corsOptions));
 
 server.use(express.json()) 
 
-mongoose.connect('mongodb://localhost:27017/Grocery').then((e) =>
+mongoose.connect(process.env.MONGO_URL).then((e) =>
   console.log('db connect') 
 ).catch((err) =>
   console.log(err)
