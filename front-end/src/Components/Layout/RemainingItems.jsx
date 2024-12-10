@@ -162,7 +162,11 @@ export const RemainingItems = ({
                 </button>
               )}
               <div className="card-image">
-                <img src={item.image} alt="Image" />
+                <img
+                  src={item.image}
+                  alt="Image"
+                  className="card-image-image"
+                />
               </div>
               <h3 className="card-name">{item.name}</h3>
               <div className="card-rate mb-3">

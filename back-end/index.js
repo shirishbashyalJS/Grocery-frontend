@@ -7,7 +7,24 @@ const port = 2081;
 const products = require("./Modal/itemModel");
 const adminDetail = require("./Modal/AdminModal");
 
-server.use(cors());
+//CORS
+const allowedOrigins = ['http://localhost:5173'];
+
+const corsOptions = {
+  origin: (origin, callback) => {
+    if (allowedOrigins.includes(origin) || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+};
+
+server.use(cors(corsOptions));
+// server.use(cors());
+
+
+
 server.use(express.json()) 
 
 mongoose.connect('mongodb://localhost:27017/Grocery').then((e) =>

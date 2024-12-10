@@ -244,7 +244,7 @@
   position: relative;
 }
 
-.card-container .card-image img {
+.card-container .card-image .card-image-image {
   width: 100%;
   border-radius: 10px;
   max-height: 30vh;
@@ -295,9 +295,7 @@
   height: max-content;
   margin-top: 10rem;
 }
-.product-image {
-  max-height: 200px;
-}
+
 .product-container .card-container .card {
   width: 50%;
   row-gap: 0.8rem;

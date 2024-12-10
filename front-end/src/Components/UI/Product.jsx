@@ -80,7 +80,7 @@ export const Product = ({ itemLists, productsUrl }) => {
           "You have to enter product quantity which must be greater than 0"
         );
       }
-    }
+    } else setShowModal(true);
 
     // Open modal by setting showModal to true
   };
@@ -278,9 +278,16 @@ export const Product = ({ itemLists, productsUrl }) => {
                 ? "Your item is added successfully"
                 : "You have to Login first."}
             </p>
-            <button className="btn btn-primary" onClick={closeModal}>
+            <button className="btn btn-primary me-5" onClick={closeModal}>
               Close
             </button>
+            {!login && (
+              <NavLink to="/login">
+                <button className="btn btn-primary" onClick={closeModal}>
+                  Login
+                </button>
+              </NavLink>
+            )}
           </div>
         </div>
       )}
