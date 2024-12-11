@@ -15,7 +15,7 @@ const App = () => {
   const GeneralUrl = "https://grocery-2q8d.onrender.com/nbgs/";
   const productsUrl = `${GeneralUrl}products`;
   const adminUrl = `${GeneralUrl}admindetail`;
-  const [itemLists, setItemLists] = useState();
+  const [itemLists, setItemLists] = useState(); 
   const [adminDetail, setAdminDetail] = useState();
   useEffect(() => {
     axios
@@ -35,14 +35,6 @@ const App = () => {
         console.log(err);
       });
 
-    // axios
-    //   .post(productsUrl, abc)
-    //   .then((result) => {
-    //     setAdminDetail(result.data[0]);
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
   }, []);
   if (itemLists && adminDetail) {
     // console.log(itemLists);

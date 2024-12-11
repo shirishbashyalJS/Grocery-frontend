@@ -320,6 +320,9 @@
     width: 100%;
   }
 }
+.product-container .product-image {
+  max-width: 350px;
+}
 
 .login {
   margin-top: 10rem;

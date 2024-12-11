@@ -56,10 +56,7 @@ export const Login = () => {
 
   const validateForm = () => {
     const newErrors = {};
-    if (!user.fname) newErrors.fname = "First name is required.";
-    if (!user.lname) newErrors.lname = "Last name is required.";
     if (!user.email) newErrors.email = "Email is required.";
-    if (!user.password) newErrors.password = "Password is required.";
     if (!user.address) newErrors.address = "Address is required.";
     if (!user.contact) newErrors.contact = "Contact number is required";
     if (!latitude) newErrors.location = "Location is required.";
@@ -86,9 +83,9 @@ export const Login = () => {
   };
 
   return (
-    <section className="login" id="login">
+    <section className="login p-3" id="login">
       <NavLink to="/">
-        <button type="button" className="btn btn-outline-dark ms-5">
+        <button type="button" className="btn btn-outline-dark ms-5 mb-5">
           Go Back
         </button>
       </NavLink>
@@ -99,33 +96,6 @@ export const Login = () => {
             className="needs-validation was-validated fs-5 mt-5 gy-5"
             noValidate=""
           >
-            <div className="row">
-              <div className="col-md-6 mb-4">
-                <label htmlFor="firstName">First name</label>
-                <input
-                  onChange={handleInputChange}
-                  name="fname"
-                  type="text"
-                  className="form-control fs-5"
-                  id="firstName"
-                  required
-                />
-                <div className="invalid-feedback">{errors.fname}</div>
-              </div>
-              <div className="col-md-6 mb-4">
-                <label htmlFor="lastName">Last name</label>
-                <input
-                  type="text"
-                  className="form-control fs-5"
-                  onChange={handleInputChange}
-                  name="lname"
-                  id="lastName"
-                  required
-                />
-                <div className="invalid-feedback">{errors.lname}</div>
-              </div>
-            </div>
-
             <div className="mb-4">
               <label htmlFor="email">
                 Email <span className="text-muted">(Mandatory)</span>
@@ -141,20 +111,7 @@ export const Login = () => {
               />
               <div className="invalid-feedback">{errors.email}</div>
             </div>
-            <div className="mb-4">
-              <label htmlFor="password">
-                Password <span className="text-muted fs-5">(Mandatory)</span>
-              </label>
-              <input
-                type="password"
-                className="form-control"
-                id="password"
-                onChange={handleInputChange}
-                name="password"
-                required
-              />
-              <div className="invalid-feedback">{errors.password}</div>
-            </div>
+
             <div className="mb-4">
               <label htmlFor="address">Address</label>
               <input
