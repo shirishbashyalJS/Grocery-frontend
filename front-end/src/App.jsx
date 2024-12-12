@@ -12,14 +12,32 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Loading } from "./Components/UI/Loading";
 
-const createRoutes = (
-  adminDetail,
-  itemLists,
-  GeneralUrl,
-  productsUrl,
-  adminUrl
-) => {
-  return [
+const App = () => {
+  const GeneralUrl = "http://localhost:2081/nbgs/";
+  const productsUrl = `${GeneralUrl}products`;
+  const adminUrl = `${GeneralUrl}admindetail`;
+  const [itemLists, setItemLists] = useState();
+  const [adminDetail, setAdminDetail] = useState();
+  useEffect(() => {
+    axios
+      .get(productsUrl)
+      .then((result) => {
+        setItemLists(result.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    axios
+      .get(adminUrl)
+      .then((result) => {
+        setAdminDetail(result.data[0]);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  const router = createBrowserRouter([
     {
       path: "/",
       element: <Layout adminDetail={adminDetail} itemLists={itemLists} />,
@@ -68,41 +86,7 @@ const createRoutes = (
         },
       ],
     },
-  ];
-};
-const App = () => {
-  const GeneralUrl = "https://grocery-2q8d.onrender.com/nbgs/";
-  const productsUrl = `${GeneralUrl}products`;
-  const adminUrl = `${GeneralUrl}admindetail`;
-  const [itemLists, setItemLists] = useState();
-  const [adminDetail, setAdminDetail] = useState();
-  useEffect(() => {
-    axios
-      .get(productsUrl)
-      .then((result) => {
-        setItemLists(result.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    axios
-      .get(adminUrl)
-      .then((result) => {
-        setAdminDetail(result.data[0]);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
-  // console.log(itemLists);
-  const routes = createRoutes(
-    adminDetail,
-    itemLists,
-    GeneralUrl,
-    productsUrl,
-    adminUrl
-  );
-  const router = createBrowserRouter(routes);
+  ]);
   return <RouterProvider router={router}></RouterProvider>;
 };
 

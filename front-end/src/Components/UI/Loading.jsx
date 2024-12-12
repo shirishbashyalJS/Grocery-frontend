@@ -5,8 +5,8 @@ export const Loading = () => {
         className="spinner-border"
         style={{
           width: "3rem",
-          marginTop: "17rem",
-          marginBottom: "5rem",
+          marginTop: "12rem",
+          marginBottom: "8rem",
           height: "3rem",
         }}
         role="status"
