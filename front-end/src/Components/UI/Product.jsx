@@ -277,7 +277,7 @@ export const Product = ({ itemLists, productsUrl }) => {
                 ? "Your item is added successfully"
                 : "You have to Login first."}
             </p>
-            <button className="btn btn-primary me-5" onClick={closeModal}>
+            <button className="btn btn-primary me-3" onClick={closeModal}>
               Close
             </button>
             {!login && (
