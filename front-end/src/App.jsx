@@ -71,7 +71,7 @@ const createRoutes = (
   ];
 };
 const App = () => {
-  const GeneralUrl = "http://localhost:2081/nbgs/";
+  const GeneralUrl = "https://grocery-2q8d.onrender.com/nbgs/";
   const productsUrl = `${GeneralUrl}products`;
   const adminUrl = `${GeneralUrl}admindetail`;
   const [itemLists, setItemLists] = useState();
