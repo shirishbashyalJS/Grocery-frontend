@@ -12,12 +12,7 @@ export const Layout = ({ adminDetail }) => {
     const storedUser = localStorage.getItem("user");
     return storedUser ? JSON.parse(storedUser) : {};
   });
-  const [admin, setAdmin] = useState(() => {
-    return (
-      user.email == adminDetail.admin.username &&
-      user.password == adminDetail.admin.password
-    );
-  });
+  const [admin, setAdmin] = useState();
   const [searchValue, setSearchValue] = useState(null);
   const [login, setLogin] = useState(() => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
@@ -25,6 +20,15 @@ export const Layout = ({ adminDetail }) => {
     if (storedUser) return storedUser.email ? true : false;
     else return false;
   });
+  useEffect(() => {
+    adminDetail &&
+      setAdmin(() => {
+        return (
+          user.email == adminDetail.admin.username &&
+          user.password == adminDetail.admin.password
+        );
+      });
+  }, [adminDetail]);
   const [cart, setCart] = useState(() => {
     const storedCart = localStorage.getItem("cart");
     return storedCart ? JSON.parse(storedCart) : [];

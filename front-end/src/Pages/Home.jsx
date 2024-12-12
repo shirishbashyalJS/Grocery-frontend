@@ -11,7 +11,7 @@ export const Home = ({ itemLists, adminDetail, productsUrl }) => {
     <section className="home">
       <hr />
 
-      <Notice adminDetail={adminDetail} />
+      {adminDetail ? <Notice adminDetail={adminDetail} /> : <Loading />}
       <Carousel />
       {itemLists ? (
         <Items

@@ -13,15 +13,17 @@ export const Cart = ({ adminDetail, adminUrl, GeneralUrl }) => {
       </NavLink>
       {/* cart Items */}
 
-      {admin ? (
-        <AdminCart
-          adminDetail={adminDetail}
-          adminUrl={adminUrl}
-          GeneralUrl={GeneralUrl}
-        />
-      ) : (
-        <UserCart minOrder={adminDetail.minOrder} GeneralUrl={GeneralUrl} />
-      )}
+      {admin
+        ? adminDetail && (
+            <AdminCart
+              adminDetail={adminDetail}
+              adminUrl={adminUrl}
+              GeneralUrl={GeneralUrl}
+            />
+          )
+        : adminDetail && (
+            <UserCart minOrder={adminDetail.minOrder} GeneralUrl={GeneralUrl} />
+          )}
     </section>
   );
 };

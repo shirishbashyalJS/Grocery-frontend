@@ -3,7 +3,6 @@ import { useCart } from "../Layout/Layout";
 import axios from "axios";
 
 export const AdminCart = ({ adminDetail, adminUrl, GeneralUrl }) => {
-  const { cart, setCart } = useCart();
   const [order, setOrder] = useState();
   const [changeAdminDetail, setChangeAdminDetail] = useState(adminDetail);
   const [settingVisible, setSettingVisible] = useState(false);

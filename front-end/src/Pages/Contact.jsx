@@ -28,7 +28,7 @@ export const Contact = ({ adminDetail }) => {
             </p>
             <p className="fs-4">
               <span className="text-secondary">Contact Number: </span>
-              +977-{adminDetail.contact}
+              +977-{adminDetail && adminDetail.contact}
             </p>
           </div>
         </div>
