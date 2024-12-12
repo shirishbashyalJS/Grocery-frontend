@@ -12,6 +12,56 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Loading } from "./Components/UI/Loading";
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout adminDetail={adminDetail} itemLists={itemLists} />,
+    errorElement: <ErrPage />,
+
+    children: [
+      {
+        path: "/",
+        element: (
+          <Home
+            itemLists={itemLists}
+            adminDetail={adminDetail}
+            productsUrl={productsUrl}
+          />
+        ),
+      },
+      {
+        path: "/product/:id",
+        element: itemLists ? (
+          <Product itemLists={itemLists} productsUrl={productsUrl} />
+        ) : (
+          <Loading />
+        ),
+      },
+      {
+        path: "/contact",
+        element: <Contact adminDetail={adminDetail} />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/signin",
+        element: <Signin />,
+      },
+      {
+        path: "/cart",
+        element: (
+          <Cart
+            adminDetail={adminDetail}
+            GeneralUrl={GeneralUrl}
+            adminUrl={adminUrl}
+          />
+        ),
+      },
+    ],
+  },
+]);
 const App = () => {
   const GeneralUrl = "http://localhost:2081/nbgs/";
   const productsUrl = `${GeneralUrl}products`;
@@ -37,57 +87,6 @@ const App = () => {
       });
   }, []);
   // console.log(itemLists);
-
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Layout adminDetail={adminDetail} itemLists={itemLists} />,
-      errorElement: <ErrPage />,
-
-      children: [
-        {
-          path: "/",
-          element: (
-            <Home
-              itemLists={itemLists}
-              adminDetail={adminDetail}
-              productsUrl={productsUrl}
-            />
-          ),
-        },
-        {
-          path: "/product/:id",
-          element: itemLists ? (
-            <Product itemLists={itemLists} productsUrl={productsUrl} />
-          ) : (
-            <Loading />
-          ),
-        },
-        {
-          path: "/contact",
-          element: <Contact adminDetail={adminDetail} />,
-        },
-        {
-          path: "/login",
-          element: <Login />,
-        },
-        {
-          path: "/signin",
-          element: <Signin />,
-        },
-        {
-          path: "/cart",
-          element: (
-            <Cart
-              adminDetail={adminDetail}
-              GeneralUrl={GeneralUrl}
-              adminUrl={adminUrl}
-            />
-          ),
-        },
-      ],
-    },
-  ]);
 
   return <RouterProvider router={router}></RouterProvider>;
 };
