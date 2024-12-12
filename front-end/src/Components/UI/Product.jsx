@@ -37,8 +37,7 @@ export const Product = ({ itemLists, productsUrl }) => {
   };
 
   const handleChangesSave = () => {
-    const demo = prompt("Enter 'ok' to make the changes");
-    if (updateProduct && demo == "ok") {
+    if (updateProduct) {
       axios
         .put(productsUrl + "/" + selectedProduct._id, updateProduct)
         .then((res) => {
