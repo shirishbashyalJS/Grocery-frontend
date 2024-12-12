@@ -10,12 +10,13 @@ import { Cart } from "./Pages/Cart";
 import { Signin } from "./Pages/Signin";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Loading } from "./Components/UI/Loading";
 
 const App = () => {
-  const GeneralUrl = "https://grocery-2q8d.onrender.com/nbgs/";
+  const GeneralUrl = "http://localhost:2081/nbgs/";
   const productsUrl = `${GeneralUrl}products`;
   const adminUrl = `${GeneralUrl}admindetail`;
-  const [itemLists, setItemLists] = useState(); 
+  const [itemLists, setItemLists] = useState();
   const [adminDetail, setAdminDetail] = useState();
   useEffect(() => {
     axios
@@ -34,15 +35,14 @@ const App = () => {
       .catch((err) => {
         console.log(err);
       });
-
   }, []);
-  if (itemLists && adminDetail) {
+  if (adminDetail) {
     // console.log(itemLists);
 
     const router = createBrowserRouter([
       {
         path: "/",
-        element: <Layout adminDetail={adminDetail} />,
+        element: <Layout adminDetail={adminDetail} itemLists={itemLists} />,
         errorElement: <ErrPage />,
 
         children: [
@@ -58,8 +58,10 @@ const App = () => {
           },
           {
             path: "/product/:id",
-            element: (
+            element: itemLists ? (
               <Product itemLists={itemLists} productsUrl={productsUrl} />
+            ) : (
+              <Loading />
             ),
           },
           {
